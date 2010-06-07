@@ -1,0 +1,5 @@
+Observations(only the weird ones) Diary
+----------------------------------------
+
+1st observation : When the events KeyPress and KeyRelease are selected and gnee run when i am replaying it the last key is not being released(because of which the letter associated with that key is continuously being typed even after replay has finished and other windows are clicked).This happens only if recording stopped in the middle of typing.
+Conclusion : Probably gnee tells the comp that a key has been pressed and is not able to say the key has been released.So the comp still thinks that that particular key is being pressed until another key is pressed.
