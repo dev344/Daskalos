@@ -1,0 +1,17 @@
+fake-motion x=840 y=92 msec=00010
+fake-motion x=840 y=194 msec=00210
+fake-motion x=840 y=296 msec=00410
+fake-motion x=840 y=398 msec=00610
+fake-motion x=840 y=499 msec=00810
+fake-motion x=840 y=302 msec=01010
+fake-motion x=840 y=204 msec=01210
+fake-motion x=840 y=106 msec=01310
+fake-motion x=840 y=108 msec=01410
+fake-motion x=840 y=104 msec=01510
+fake-motion x=840 y=199 msec=01610
+fake-motion x=840 y=298 msec=01710
+fake-motion x=840 y=396 msec=01810
+fake-motion x=840 y=495 msec=01910
+fake-motion x=840 y=594 msec=02010
+fake-motion x=840 y=692 msec=02110
+

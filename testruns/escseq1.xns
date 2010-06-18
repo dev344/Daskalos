@@ -1,0 +1,690 @@
+####################################
+#         System information       #
+####################################
+# Date:                   2010:06:14 
+# Time:                   19:36:59 
+# Xnee program:           <missing info> 
+# Xnee version:           3.06 
+# Xnee home:              http://www.gnu.org/software/xnee/ 
+# Xnee info mailing list: info-xnee@gnu.org 
+# Xnee bug mailing list:  bug-xnee@gnu.org 
+# X version:              11 
+# X revision:             0 
+# X vendor:               The X.Org Foundation 
+# X vendor release:       10706000 
+# Record version major:   1
+# Record version minor:   13
+# OS name:                Linux 
+# OS Release:             2.6.32-22-generic 
+# OS Version:             #33-Ubuntu SMP Wed Apr 28 13:27:30 UTC 2010 
+# Machine:                i686 
+# Nodename:               Laptop-of-LordofGods 
+# Display name:           
+# Dimension:              1366x768
+
+
+
+##############################################
+#      Xnee application arguments            #
+##############################################
+#  gnee 
+
+
+##############################################
+#      Displays                              #
+##############################################
+# display 
+# distribute
+
+
+##############################################
+#      Files                                 #
+##############################################
+# out-file /home/devesh/Desktop/Daskalos/testruns/escseq1.xns
+# err-file stderr
+
+
+##############################################
+#      Key Grabs                             #
+##############################################
+# stop-key         0
+# pause-key        0
+# resume-key       0
+# insert-key       0
+# exec-key         0
+# exec-program-key         xnee-exec-no-program
+
+
+##############################################
+#      Recording limits etc                  #
+##############################################
+
+events-to-record        500
+data-to-record          -1
+seconds-to-record       -9
+# first-last
+
+# Record  all (including current) clients or only future ones
+all-clients
+# future-clients
+
+# Store the starting mouse position 
+# store-mouse-position
+
+
+##############################################
+#      Resolution                            #
+##############################################
+
+# Resolution
+#recorded-resolution  1366x768
+#replay-resolution  1x1
+#resolution-adjustment  0
+
+
+##############################################
+#      Speed                                 #
+##############################################
+
+# Speed
+#speed-percent  100
+
+
+##############################################
+#      Replaying limits etc                  #
+##############################################
+
+max-threshold 20 
+min-threshold -20 
+tot-threshold 20 
+
+
+##############################################
+#      Feedback                              #
+##############################################
+#feedback-none
+#feedback-stderr
+feedback-xosd
+ 
+
+
+##############################################
+#      Various                               #
+##############################################
+
+# Plugin file 
+
+# Modes (currently not used)
+# synchronised-replay
+
+# Replay offset
+#replay-offset 0x0
+
+# Human printout of X11 data (instead of Xnee format)
+human-printout  
+
+# Delay before starting record/replay
+# time 0
+
+# No recording of ReparentNotify
+# no-reparent-recording 
+
+# Various
+#########################################
+#          Record settings              #
+#########################################
+#   data_flags          7
+#   rState              148225952
+#   xids[0]             3
+#   xids[1]             0
+# Number of Ranges      5
+# RecordRange[0]
+request-range            0-0
+reply-range                   0-0 
+extension-request-major-range  0-0 
+extension-request-minor-range  0-0 
+extension-reply-major-range   0-0
+extension-reply-minor-range   0-0 
+delivered-event-range         7-10 
+device-event-range            2-6 
+error-range                   0-0 
+# RecordRange[1]
+request-range            0-0
+reply-range                   0-0 
+extension-request-major-range  0-0 
+extension-request-minor-range  0-0 
+extension-reply-major-range   0-0
+extension-reply-minor-range   0-0 
+delivered-event-range         12-12 
+device-event-range            0-0 
+error-range                   0-0 
+# RecordRange[2]
+request-range            0-0
+reply-range                   0-0 
+extension-request-major-range  0-0 
+extension-request-minor-range  0-0 
+extension-reply-major-range   0-0
+extension-reply-minor-range   0-0 
+delivered-event-range         15-17 
+device-event-range            0-0 
+error-range                   0-0 
+# RecordRange[3]
+request-range            0-0
+reply-range                   0-0 
+extension-request-major-range  0-0 
+extension-request-minor-range  0-0 
+extension-reply-major-range   0-0
+extension-reply-minor-range   0-0 
+delivered-event-range         21-26 
+device-event-range            0-0 
+error-range                   0-0 
+# RecordRange[4]
+request-range            0-0
+reply-range                   0-0 
+extension-request-major-range  0-0 
+extension-request-minor-range  0-0 
+extension-reply-major-range   0-0
+extension-reply-minor-range   0-0 
+delivered-event-range         2-6 
+device-event-range            0-0 
+error-range                   0-0 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=962 rootY=114 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=962 rootY=114 eventX=962 eventY=114 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=961 rootY=114 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=961 rootY=114 eventX=961 eventY=114 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=961 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=961 rootY=115 eventX=961 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=962 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=962 rootY=115 eventX=962 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=963 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=963 rootY=115 eventX=963 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=964 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=964 rootY=115 eventX=964 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=965 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=965 rootY=115 eventX=965 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=966 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=966 rootY=115 eventX=966 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=967 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=967 rootY=115 eventX=967 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=968 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=968 rootY=115 eventX=968 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=970 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=970 rootY=115 eventX=970 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=971 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=971 rootY=115 eventX=971 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=974 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=974 rootY=115 eventX=974 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=977 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=977 rootY=115 eventX=977 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=980 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=980 rootY=115 eventX=980 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=983 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=983 rootY=115 eventX=983 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=987 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=987 rootY=115 eventX=987 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=992 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=992 rootY=115 eventX=992 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=997 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=997 rootY=115 eventX=997 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1005 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1005 rootY=115 eventX=1005 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1013 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1013 rootY=115 eventX=1013 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1021 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1021 rootY=115 eventX=1021 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1031 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1031 rootY=115 eventX=1031 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1040 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1040 rootY=115 eventX=1040 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1049 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1049 rootY=115 eventX=1049 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1059 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1059 rootY=115 eventX=1059 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1068 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1068 rootY=115 eventX=1068 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1076 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1076 rootY=115 eventX=1076 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1085 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1085 rootY=115 eventX=1085 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1095 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1095 rootY=115 eventX=1095 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1103 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1103 rootY=115 eventX=1103 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1110 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1110 rootY=115 eventX=1110 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1118 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1118 rootY=115 eventX=1118 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1125 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1125 rootY=115 eventX=1125 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1131 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1131 rootY=115 eventX=1131 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1137 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1137 rootY=115 eventX=1137 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1143 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1143 rootY=115 eventX=1143 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1147 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1147 rootY=115 eventX=1147 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1151 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1151 rootY=115 eventX=1151 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1156 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1156 rootY=115 eventX=1156 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1160 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1160 rootY=115 eventX=1160 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1163 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1163 rootY=115 eventX=1163 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1164 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1164 rootY=115 eventX=1164 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1166 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1166 rootY=115 eventX=1166 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1167 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1167 rootY=115 eventX=1167 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1168 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1168 rootY=115 eventX=1168 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1169 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1169 rootY=115 eventX=1169 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1170 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1170 rootY=115 eventX=1170 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1171 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1171 rootY=115 eventX=1171 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1172 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1172 rootY=115 eventX=1172 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1173 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1173 rootY=115 eventX=1173 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1174 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1174 rootY=115 eventX=1174 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1175 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1175 rootY=115 eventX=1175 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1176 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1176 rootY=115 eventX=1176 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1177 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1177 rootY=115 eventX=1177 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1178 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1178 rootY=115 eventX=1178 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1179 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1179 rootY=115 eventX=1179 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1180 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1180 rootY=115 eventX=1180 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1181 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1181 rootY=115 eventX=1181 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1182 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1182 rootY=115 eventX=1182 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=115 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=115 eventX=1183 eventY=115 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=116 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=116 eventX=1183 eventY=116 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=117 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=117 eventX=1183 eventY=117 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=118 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=118 eventX=1183 eventY=118 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=119 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=119 eventX=1183 eventY=119 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=120 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=120 eventX=1183 eventY=120 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=121 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=121 eventX=1183 eventY=121 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=122 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=122 eventX=1183 eventY=122 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=123 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=123 eventX=1183 eventY=123 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=124 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=124 eventX=1183 eventY=124 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=125 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=125 eventX=1183 eventY=125 state=0 sameScreen=1 } } 
+Event=KeyPress Number=2 { { root=0 event=0 child=0 rootX=1183 rootY=125 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=KeyPress Number=2 { { root=273 event=29360158 child=0 rootX=1183 rootY=125 eventX=1184 eventY=126 state=0 sameScreen=1 } } 
+Event=ConfigureNotify Number=22 { { event=29372567 window=29372567 aboveSibling=85985129 parent=1367 x=769 y=170 width=36 height=0 borderWidth=1 override=15810847 } } 
+Event=ConfigureNotify Number=22 { { event=273 window=29372567 aboveSibling=85985129 parent=1367 x=769 y=170 width=36 height=0 borderWidth=1 override=15810847 } } 
+Event=ConfigureNotify Number=22 { { event=273 window=29372567 aboveSibling=85985129 parent=1367 x=769 y=170 width=36 height=0 borderWidth=1 override=15810847 } } 
+Event=ConfigureNotify Number=22 { { event=273 window=29372567 aboveSibling=85985129 parent=1367 x=769 y=170 width=36 height=0 borderWidth=1 override=15810847 } } 
+Event=VisibilityNotify Number=15 { { window=29372567 state=0 } } 
+Event=Expose Number=12 { { window=29372567 x=0 y=0 width=170 height=36 count=0 } } 
+Event= not defined  Number=150 { {  NOT IMPLEMENTED  } } 
+Event=KeyRelease Number=3 { { root=0 event=0 child=0 rootX=1183 rootY=125 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=KeyRelease Number=3 { { root=273 event=29360158 child=0 rootX=1183 rootY=125 eventX=1184 eventY=126 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=126 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=126 eventX=1183 eventY=126 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=127 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=127 eventX=1183 eventY=127 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=128 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=128 eventX=1183 eventY=128 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=129 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=129 eventX=1183 eventY=129 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=131 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=131 eventX=1183 eventY=131 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=133 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=133 eventX=1183 eventY=133 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=135 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=135 eventX=1183 eventY=135 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=137 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=137 eventX=1183 eventY=137 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=139 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=139 eventX=1183 eventY=139 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=142 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=142 eventX=1183 eventY=142 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=144 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=144 eventX=1183 eventY=144 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=145 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=145 eventX=1183 eventY=145 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=147 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=147 eventX=1183 eventY=147 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=148 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=148 eventX=1183 eventY=148 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=149 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=149 eventX=1183 eventY=149 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=150 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=150 eventX=1183 eventY=150 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=151 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=151 eventX=1183 eventY=151 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1183 rootY=152 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1183 rootY=152 eventX=1183 eventY=152 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1184 rootY=152 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1184 rootY=152 eventX=1184 eventY=152 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1184 rootY=153 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1184 rootY=153 eventX=1184 eventY=153 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=153 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=153 eventX=1185 eventY=153 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=154 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=154 eventX=1185 eventY=154 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=155 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=155 eventX=1185 eventY=155 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=156 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=156 eventX=1185 eventY=156 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=157 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=157 eventX=1185 eventY=157 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=158 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=158 eventX=1185 eventY=158 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=159 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=159 eventX=1185 eventY=159 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=160 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=160 eventX=1185 eventY=160 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=161 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=161 eventX=1185 eventY=161 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=162 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=162 eventX=1185 eventY=162 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=164 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=164 eventX=1185 eventY=164 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=165 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=165 eventX=1185 eventY=165 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=167 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=167 eventX=1185 eventY=167 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=168 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=168 eventX=1185 eventY=168 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=170 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=170 eventX=1185 eventY=170 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=171 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=171 eventX=1185 eventY=171 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=173 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=173 eventX=1185 eventY=173 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=174 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=174 eventX=1185 eventY=174 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=176 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=176 eventX=1185 eventY=176 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=177 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=177 eventX=1185 eventY=177 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=179 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=179 eventX=1185 eventY=179 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=180 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=180 eventX=1185 eventY=180 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=182 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=182 eventX=1185 eventY=182 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=183 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=183 eventX=1185 eventY=183 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=184 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=184 eventX=1185 eventY=184 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=185 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=185 eventX=1185 eventY=185 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1185 rootY=186 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1185 rootY=186 eventX=1185 eventY=186 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1186 rootY=187 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1186 rootY=187 eventX=1186 eventY=187 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1186 rootY=188 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1186 rootY=188 eventX=1186 eventY=188 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1186 rootY=189 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1186 rootY=189 eventX=1186 eventY=189 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1187 rootY=190 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1187 rootY=190 eventX=1187 eventY=190 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1188 rootY=191 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1188 rootY=191 eventX=1188 eventY=191 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1188 rootY=192 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1188 rootY=192 eventX=1188 eventY=192 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1188 rootY=193 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1188 rootY=193 eventX=1188 eventY=193 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1189 rootY=194 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1189 rootY=194 eventX=1189 eventY=194 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1189 rootY=195 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1189 rootY=195 eventX=1189 eventY=195 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1189 rootY=196 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1189 rootY=196 eventX=1189 eventY=196 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1189 rootY=197 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1189 rootY=197 eventX=1189 eventY=197 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1189 rootY=198 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1189 rootY=198 eventX=1189 eventY=198 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1189 rootY=199 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1189 rootY=199 eventX=1189 eventY=199 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1189 rootY=200 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1189 rootY=200 eventX=1189 eventY=200 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1190 rootY=202 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1190 rootY=202 eventX=1190 eventY=202 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1190 rootY=203 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1190 rootY=203 eventX=1190 eventY=203 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1190 rootY=204 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1190 rootY=204 eventX=1190 eventY=204 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1190 rootY=206 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1190 rootY=206 eventX=1190 eventY=206 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=207 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=207 eventX=1191 eventY=207 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=208 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=208 eventX=1191 eventY=208 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=210 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=210 eventX=1191 eventY=210 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=211 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=211 eventX=1191 eventY=211 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=212 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=212 eventX=1191 eventY=212 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=213 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=213 eventX=1191 eventY=213 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=214 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=214 eventX=1191 eventY=214 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=216 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=216 eventX=1191 eventY=216 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=217 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=217 eventX=1191 eventY=217 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=219 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=219 eventX=1191 eventY=219 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=220 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=220 eventX=1191 eventY=220 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=222 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=222 eventX=1191 eventY=222 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=223 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=223 eventX=1191 eventY=223 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=225 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=225 eventX=1191 eventY=225 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=226 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=226 eventX=1191 eventY=226 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=228 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=228 eventX=1191 eventY=228 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1191 rootY=230 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1191 rootY=230 eventX=1191 eventY=230 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1192 rootY=231 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1192 rootY=231 eventX=1192 eventY=231 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1192 rootY=232 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1192 rootY=232 eventX=1192 eventY=232 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1193 rootY=234 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1193 rootY=234 eventX=1193 eventY=234 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1193 rootY=235 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1193 rootY=235 eventX=1193 eventY=235 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1194 rootY=236 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1194 rootY=236 eventX=1194 eventY=236 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1195 rootY=237 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1195 rootY=237 eventX=1195 eventY=237 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1195 rootY=238 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1195 rootY=238 eventX=1195 eventY=238 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1196 rootY=239 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1196 rootY=239 eventX=1196 eventY=239 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1196 rootY=240 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1196 rootY=240 eventX=1196 eventY=240 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1196 rootY=241 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1196 rootY=241 eventX=1196 eventY=241 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1197 rootY=242 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1197 rootY=242 eventX=1197 eventY=242 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1197 rootY=243 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1197 rootY=243 eventX=1197 eventY=243 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1198 rootY=243 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1198 rootY=243 eventX=1198 eventY=243 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1198 rootY=244 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1198 rootY=244 eventX=1198 eventY=244 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1198 rootY=245 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1198 rootY=245 eventX=1198 eventY=245 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1198 rootY=246 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1198 rootY=246 eventX=1198 eventY=246 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1198 rootY=247 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1198 rootY=247 eventX=1198 eventY=247 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1198 rootY=248 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1198 rootY=248 eventX=1198 eventY=248 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1199 rootY=249 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1199 rootY=249 eventX=1199 eventY=249 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1199 rootY=250 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1199 rootY=250 eventX=1199 eventY=250 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1200 rootY=251 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1200 rootY=251 eventX=1200 eventY=251 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1200 rootY=252 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1200 rootY=252 eventX=1200 eventY=252 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1201 rootY=253 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1201 rootY=253 eventX=1201 eventY=253 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1201 rootY=254 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1201 rootY=254 eventX=1201 eventY=254 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1202 rootY=254 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1202 rootY=254 eventX=1202 eventY=254 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1202 rootY=255 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1202 rootY=255 eventX=1202 eventY=255 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1203 rootY=256 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1203 rootY=256 eventX=1203 eventY=256 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1203 rootY=257 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1203 rootY=257 eventX=1203 eventY=257 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1203 rootY=258 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1203 rootY=258 eventX=1203 eventY=258 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1203 rootY=260 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1203 rootY=260 eventX=1203 eventY=260 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=261 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=261 eventX=1204 eventY=261 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=262 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=262 eventX=1204 eventY=262 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=263 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=263 eventX=1204 eventY=263 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=264 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=264 eventX=1204 eventY=264 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=265 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=265 eventX=1204 eventY=265 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=266 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=266 eventX=1204 eventY=266 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=267 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=267 eventX=1204 eventY=267 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=268 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=268 eventX=1204 eventY=268 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=269 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=269 eventX=1204 eventY=269 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=270 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=270 eventX=1204 eventY=270 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=271 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=271 eventX=1204 eventY=271 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=273 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=273 eventX=1204 eventY=273 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1204 rootY=274 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1204 rootY=274 eventX=1204 eventY=274 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1205 rootY=275 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1205 rootY=275 eventX=1205 eventY=275 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1205 rootY=277 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1205 rootY=277 eventX=1205 eventY=277 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1205 rootY=278 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1205 rootY=278 eventX=1205 eventY=278 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1205 rootY=280 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1205 rootY=280 eventX=1205 eventY=280 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=281 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=281 eventX=1206 eventY=281 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=282 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=282 eventX=1206 eventY=282 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=284 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=284 eventX=1206 eventY=284 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=285 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=285 eventX=1206 eventY=285 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=286 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=286 eventX=1206 eventY=286 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=288 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=288 eventX=1206 eventY=288 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=289 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=289 eventX=1206 eventY=289 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=290 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=290 eventX=1206 eventY=290 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=292 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=292 eventX=1206 eventY=292 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=293 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=293 eventX=1206 eventY=293 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=294 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=294 eventX=1206 eventY=294 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=295 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=295 eventX=1206 eventY=295 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=296 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=296 eventX=1206 eventY=296 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=297 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=297 eventX=1206 eventY=297 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=299 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=299 eventX=1206 eventY=299 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=300 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=300 eventX=1206 eventY=300 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=301 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=301 eventX=1206 eventY=301 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=303 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=303 eventX=1206 eventY=303 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=304 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=304 eventX=1206 eventY=304 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=305 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=305 eventX=1206 eventY=305 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=307 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=307 eventX=1206 eventY=307 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=308 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=308 eventX=1206 eventY=308 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=309 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=309 eventX=1206 eventY=309 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=310 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=310 eventX=1206 eventY=310 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=311 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=311 eventX=1206 eventY=311 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=312 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=312 eventX=1206 eventY=312 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=313 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=313 eventX=1206 eventY=313 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=314 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=314 eventX=1206 eventY=314 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=315 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=315 eventX=1206 eventY=315 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=316 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=316 eventX=1206 eventY=316 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=317 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=317 eventX=1206 eventY=317 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=318 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=318 eventX=1206 eventY=318 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=319 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=319 eventX=1206 eventY=319 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=320 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=320 eventX=1206 eventY=320 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=321 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=321 eventX=1206 eventY=321 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1206 rootY=322 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1206 rootY=322 eventX=1206 eventY=322 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1207 rootY=323 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1207 rootY=323 eventX=1207 eventY=323 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1207 rootY=324 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1207 rootY=324 eventX=1207 eventY=324 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1208 rootY=324 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1208 rootY=324 eventX=1208 eventY=324 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1208 rootY=325 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1208 rootY=325 eventX=1208 eventY=325 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1209 rootY=325 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1209 rootY=325 eventX=1209 eventY=325 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1209 rootY=326 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1209 rootY=326 eventX=1209 eventY=326 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1209 rootY=327 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1209 rootY=327 eventX=1209 eventY=327 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1210 rootY=327 eventX=0 eventY=0 state=0 sameScreen=0 } } 
+Event=MotionNotify Number=6 { { root=273 event=29360314 child=0 rootX=1210 rootY=327 eventX=1210 eventY=327 state=0 sameScreen=1 } } 
+Event=MotionNotify Number=6 { { root=0 event=0 child=0 rootX=1210 rootY=328 eventX=0 eventY=0 state=0 sameScreen=0 } } 
