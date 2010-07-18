@@ -15,10 +15,17 @@
 """
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import time
 
 def mainProgram():
 	""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.
 	"""
+	####types####
+	# observer : object of class Observer
+	# children_of_firefox : list of objects of class Accessibility.Accessible    *i think
+	# prefWindowNum,newWindowNum : integer
+	# frameName = string
+	
 	from observer import *                             #if i am using * then i should mention what all come under * later
 	import dogtail.rawinput
 
@@ -52,7 +59,9 @@ def mainProgram():
 		raise NameError("Could not focus frame " + prefWindow)
 	
 	click('Advanced')
+	time.sleep(1)
 	click('Network')
+	time.sleep(1)
 	scroll_pane = children_of_firefox[prefWindowNum].children
 	panel = scroll_pane[7].children       #scroll_pane[7] is Advanced options
 	scroll_pane2 = panel[0].children    

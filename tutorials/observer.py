@@ -7,7 +7,10 @@
 # Other info : This was written for the application Daskalos to be included in the distro 'Shaastra Distro'
 # Contact : shaastra-distro-2010@googlegroups.com
 # ########################################################################################################################
-
+"""
+		Here there are some functions which the tutorials of Daskalos use to run.Functions like focus.application,click etc
+		are all part of dogtail.procedural module.
+"""
 
 
 from dogtail.procedural import *
