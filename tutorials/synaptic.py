@@ -10,35 +10,47 @@
 
 """
    		What the next few lines do : This code here is intended to use dogtail to open synaptic package manager and type vim.
-   		Small explanation for the code : openWindow function opens the window and then types the name of program to be installed
 """
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import time
 
-def mainProgram():
-	""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.
-	"""
+from tutorial import Tutorial
+
+
+
+class SynapticTutorial(Tutorial):
 	
-	from observer import *                             #if i am using * then i should mention what all come under * later
-	import dogtail.rawinput
+	header = 'How to install using Synaptic Package Manager'
 	
-	observer = Observer()                              
-	
-	
-	observer.openWindow('System', 'Administration', 'Synaptic Package Manager')
-	#frameName = 'Synaptic Package Manager'
-	#if(not observer.frameFocussed(frameName,1)): 
-	#	raise NameError("Could not focus frame " + frameName)
-	"""I am debating which to include.The above three lines or the next few lines.
-	The above two lines will definitely raise an error and end while with the below few lines
-	a little i can even type some name in many cases"""
-	time.sleep(3)
-	dogtail.rawinput.typeText('vim')
-	
+	def mainProgram(self):
+		""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.
+		"""
+		
+		from observer import Observer                             
+		import dogtail.rawinput
+		
+		observer = Observer()                              
+		
+		
+		observer.openWindowFromMenu('System', 'Administration', 'Synaptic Package Manager')
+		#frameName = 'Synaptic Package Manager'
+		#if(not observer.frameFocussed(frameName,1)): 
+		#	raise Error("Could not focus frame " + frameName)
+		"""I am debating which to include.The above three lines or the next few lines.
+		The above two lines will definitely raise an error and end while with the below few lines
+		i can even type some name in many cases"""
+		time.sleep(4)
+		dogtail.rawinput.typeText('vim')
+		
+	def run(self):
+		self.mainProgram()
+		
+tutorial = SynapticTutorial()
+
 def main():
 	import subprocess
-	mainProgram()
+	tutorial.mainProgram()
 	
 if __name__=='__main__' :
     main()

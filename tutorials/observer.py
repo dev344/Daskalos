@@ -14,13 +14,20 @@
 
 
 from dogtail.procedural import *
+import time
+
+class Error(Exception):
+	def __init__(self, errorMessage):
+		print errorMessage
+ 
 
 class Observer():
 	def isFocussed(self, appName, trylimit = 30):
 		attemptNum = 0
 		while((not focus.application(appName))and(attemptNum<trylimit)):
 			attemptNum +=  1
-		if(attemptNum == trylimit): raise NameError ("Could not focus the application " + appName)
+			time.sleep(1)
+		if(attemptNum == trylimit): raise Error ("Could not focus the application " + appName)
 		else: return True
 		
 	def frameFocussed(self, frameName, trylimit = 3):
@@ -28,7 +35,8 @@ class Observer():
 		attemptNum = 0
 		while((not focus.frame(frameName))and(attemptNum<trylimit)):
 			attemptNum += 1
-		if(attemptNum == trylimit): raise NameError ("Could not focus the frame " + frameName)
+			time.sleep(1)
+		if(attemptNum == trylimit): raise Error ("Could not focus the frame " + frameName)
 		else: return True
 		
 	def searchApp(self):
@@ -48,11 +56,11 @@ class Observer():
 		# Gnome Terminal = ('Applications', 'Accessories', 'Terminal')
 		pass
 		
-	def openWindow(self,*args):
+	def openWindowFromMenu(self,*args):
 		"""This functions should open the window of applications which are there in gnome panel
 		"""
 		if(not self.isFocussed('gnome-panel')): 
-			raise NameError("Could not focus gnome-panel")
+			raise Error("Could not focus gnome-panel")
 
 		click(args[0], roleName='menu')
 		click(args[1], roleName='menu')

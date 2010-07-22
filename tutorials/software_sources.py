@@ -11,7 +11,7 @@
 """
    		What the next few lines do : This code here is intended to open software sources and click at places to take you to 
    									 the place from where you can choose your repository.
-   		Small explanation for the code : openWindow function opens window using dogtail.After that xnee moves the mouse to 
+   		Small explanation for the code : openWindowFromMenu function opens window using dogtail.After that xnee moves the mouse to 
    										 click at places. 
 """
 #!/usr/bin/python
@@ -19,23 +19,35 @@
 
 import sys
 import time
+from tutorial import *
+import subprocess
 
-def mainProgram():
-	""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.
-	"""
+
+
+class SoftwareSources(Tutorial):
+
+	header = 'How to change default repository'        #May need to state it better
 	
-	from observer import *                             #if i am using * then i should mention what all come under * later
+	def mainProgram(self):
+		""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.
+		"""
 	
-	observer = Observer()                              
-	
-	
-	observer.openWindow('System', 'Administration', 'Software Sources')
-	time.sleep(4)
-	
-	
+		from observer import Observer
+		
+		observer = Observer()                              
+		
+		observer.openWindowFromMenu('System', 'Administration', 'Software Sources')
+		time.sleep(4)
+		
+	def run(self):
+		self.mainProgram()
+		args = 'cnee --replay --no-synchronise --file ' + sys.argv[1]
+		p = subprocess.Popen(args,shell= True)
+		
+tutorial = SoftwareSources()
+
 def main():
-	import subprocess
-	mainProgram()
+	tutorial.mainProgram()
 	args = 'cnee --replay --no-synchronise --file ' + sys.argv[1]
 	p = subprocess.Popen(args,shell= True)
 	    
