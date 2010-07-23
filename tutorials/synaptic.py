@@ -23,6 +23,8 @@ class SynapticTutorial(Tutorial):
 	
 	header = 'How to install using Synaptic Package Manager'
 	
+	Description = 'This is the Synaptic Tutorial Description'
+	
 	def mainProgram(self):
 		""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.
 		"""

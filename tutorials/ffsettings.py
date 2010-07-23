@@ -20,6 +20,7 @@ class FirefoxTutorial(Tutorial):
 	
 	header = 'How to change Network Settings in Firefox'
 	
+	Description = 'Firefox Tutorial Description'
 	def mainProgram(self):
 		""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.
 		"""

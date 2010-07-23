@@ -28,6 +28,7 @@ class SoftwareSources(Tutorial):
 
 	header = 'How to change default repository'        #May need to state it better
 	
+	Description = 'This is the Software Sources Tutorial Description'
 	def mainProgram(self):
 		""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.
 		"""

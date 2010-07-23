@@ -22,7 +22,8 @@ class DaskalosUI:
         gladeFile = args[0]
         builder = gtk.Builder()
         builder.add_from_file(gladeFile)
-        signal_connections = { "on_start_tut_BTN_button_press_event" : self.func, 'on_searchbar_changed' : self.changed}
+        signal_connections = { "on_start_tut_BTN_button_press_event" : self.func, 'on_searchbar_changed' : self.changed, 
+                                 'on_treeview1_cursor_changed' : self.cursor_changed }
         builder.connect_signals( signal_connections )
         
         window = builder.get_object("mainwindow2")
@@ -34,8 +35,11 @@ class DaskalosUI:
         
         treeview1 = builder.get_object("treeview1")
         self.liststore = self.init_treeview(treeview1)
+        self.filenames = []
         treeview1.set_reorderable(False)
-    
+        self.description_label = builder.get_object("description_label")
+        self.tutorial_name_label = builder.get_object('tutorial_name_label')
+        self.tutorial_name_label.set_label('Tutorial')
         searchbar = builder.get_object('searchbar')
         #window = filter( lambda o: isinstance(o,gtk.Window), builder.get_objects())[0]
         window.show_all()
@@ -70,12 +74,29 @@ class DaskalosUI:
                 try:
                     if(substring in module.tutorial.header.lower()):
                         self.liststore.append([module.tutorial.header])
+                        self.filenames.append(shortname)
                 except Exception, e:
                     pass
        
     def func(self,*args):
     	print "U've just pressed Start tutorial button.Sorry there are no tutorials yet."
+    	
+    #def row_activated(self, treeview, path, viewcolumn):            #may not be needed.... to be removed finally if no need
+        #print 'a row has been activated', type(path)
+        #print self.liststore[0].__str__()
+        #print self.liststore[0].__getitem__(0)
     
+    def cursor_changed(self, treeview):
+        """
+            This function is called when one among the list is chosen.It then goes
+            to the corresponding file and extracts the descripton from that file.
+        """
+        filename = self.filenames[treeview.get_cursor()[0][0]]
+        module = __import__(filename)
+        self.description_label.set_label(module.tutorial.Description)
+        self.tutorial_name_label.set_label(module.tutorial.header)
+        #print '\n'.join(dir(treeview))
+        
     def changed(self, data):
         """
             This function clears the list first and then call a

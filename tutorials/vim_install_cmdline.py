@@ -24,6 +24,8 @@ class CommandLineInstall(Tutorial):
 
 	header = 'How to install via commandline'
 	
+	Description = 'This is the CommandLine Install Tutorial Description'
+	
 	def mainProgram(self):
 		""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.
 		"""

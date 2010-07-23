@@ -186,6 +186,7 @@
                   <object class="GtkTreeView" id="treeview1">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
+                    <signal name="cursor_changed" handler="on_treeview1_cursor_changed"/>
                   </object>
                   <packing>
                     <property name="position">1</property>
@@ -204,13 +205,18 @@
                   <object class="GtkHBox" id="hbox2">
                     <property name="visible">True</property>
                     <child>
-                      <placeholder/>
+                      <object class="GtkLabel" id="label2">
+                        <property name="width_request">10</property>
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">0</property>
+                      </packing>
                     </child>
                     <child>
                       <object class="GtkLabel" id="tutorial_name_label">
                         <property name="height_request">40</property>
                         <property name="visible">True</property>
-                        <property name="label" translatable="yes">&lt;b&gt;Tutorial Header&lt;/b&gt;</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -218,7 +224,13 @@
                       </packing>
                     </child>
                     <child>
-                      <placeholder/>
+                      <object class="GtkLabel" id="label3">
+                        <property name="width_request">10</property>
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">2</property>
+                      </packing>
                     </child>
                   </object>
                   <packing>
@@ -227,7 +239,25 @@
                   </packing>
                 </child>
                 <child>
-                  <placeholder/>
+                  <object class="GtkVBox" id="vbox4">
+                    <property name="visible">True</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="description_label">
+                        <property name="height_request">100</property>
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="position">1</property>
+                  </packing>
                 </child>
                 <child>
                   <object class="GtkHBox" id="hbox3">
@@ -302,9 +332,5 @@
   </object>
   <object class="GtkTextBuffer" id="textbuffer1">
     <property name="text" translatable="yes">Some text here</property>
-  </object>
-  <object class="GtkImage" id="image1">
-    <property name="visible">True</property>
-    <property name="stock">gtk-missing-image</property>
   </object>
 </interface>
