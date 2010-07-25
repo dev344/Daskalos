@@ -79,14 +79,16 @@ class DaskalosUI:
                 except Exception, e:
                     pass
        
-    def func(self,*args):
+    def func(self, data1, data2):
         try:
     	    if self.selected_filename:
                 self.window2.hide()
                 self.dialogbox.show_all()
                 self.dialogbox.set_keep_above(True)
                 args = 'python ' + self.tutorial_path + self.selected_filename + '.py'
-                p = subprocess.Popen(args,shell= True)
+                #p = subprocess.Popen(args,shell= True)               #will have to decide whether to remove this line of not
+                return_value = os.system(args)
+                self.on_stop_BTN_pressed()
         except Exception, e:
             pass
     	
@@ -116,7 +118,7 @@ class DaskalosUI:
         if (data.get_text() is not ''):
             self.get_list_items(data.get_text().lower())
     
-    def on_stop_BTN_pressed(self, data):
+    def on_stop_BTN_pressed(self, data = None):
         self.dialogbox.hide()
         self.window2.show_all()
         
