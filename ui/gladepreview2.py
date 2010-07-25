@@ -12,24 +12,25 @@
 """
 
 import gtk, gobject
-import sys, os
+import sys, os, subprocess
 
 class DaskalosUI:
 
-    tutorial_path = '/home/devesh/Desktop/Daskalos/tutorials'
+    tutorial_path = '/home/devesh/Desktop/Daskalos/tutorials/'
     
     def main(self,args):
         gladeFile = args[0]
         builder = gtk.Builder()
         builder.add_from_file(gladeFile)
         signal_connections = { "on_start_tut_BTN_button_press_event" : self.func, 'on_searchbar_changed' : self.changed, 
-                                 'on_treeview1_cursor_changed' : self.cursor_changed }
+                                 'on_treeview1_cursor_changed' : self.cursor_changed, 'on_stop_BTN_pressed' : self.on_stop_BTN_pressed}
         builder.connect_signals( signal_connections )
         
-        window = builder.get_object("mainwindow2")
-        window.set_title("Daskalos")
+        self.window2 = builder.get_object("mainwindow2")
+        self.window2.set_title("Daskalos")
+        self.dialogbox = builder.get_object("dialogbox")
         try:
-            window.set_icon_from_file("Daskalos.jpg")
+            self.window2.set_icon_from_file("Daskalos.jpg")
         except Exception, e:
             pass
         
@@ -41,8 +42,8 @@ class DaskalosUI:
         self.tutorial_name_label = builder.get_object('tutorial_name_label')
         self.tutorial_name_label.set_label('Tutorial')
         searchbar = builder.get_object('searchbar')
-        #window = filter( lambda o: isinstance(o,gtk.Window), builder.get_objects())[0]
-        window.show_all()
+        #window2 = filter( lambda o: isinstance(o,gtk.Window), builder.get_objects())[0]
+        self.window2.show_all()
 
         raw_input("Press any key to quit")
         
@@ -79,7 +80,15 @@ class DaskalosUI:
                     pass
        
     def func(self,*args):
-    	print "U've just pressed Start tutorial button.Sorry there are no tutorials yet."
+        try:
+    	    if self.selected_filename:
+                self.window2.hide()
+                self.dialogbox.show_all()
+                self.dialogbox.set_keep_above(True)
+                args = 'python ' + self.tutorial_path + self.selected_filename + '.py'
+                p = subprocess.Popen(args,shell= True)
+        except Exception, e:
+            pass
     	
     #def row_activated(self, treeview, path, viewcolumn):            #may not be needed.... to be removed finally if no need
         #print 'a row has been activated', type(path)
@@ -91,8 +100,8 @@ class DaskalosUI:
             This function is called when one among the list is chosen.It then goes
             to the corresponding file and extracts the descripton from that file.
         """
-        filename = self.filenames[treeview.get_cursor()[0][0]]
-        module = __import__(filename)
+        self.selected_filename = self.filenames[treeview.get_cursor()[0][0]]
+        module = __import__(self.selected_filename)
         self.description_label.set_label(module.tutorial.Description)
         self.tutorial_name_label.set_label(module.tutorial.header)
         #print '\n'.join(dir(treeview))
@@ -103,8 +112,13 @@ class DaskalosUI:
             function to get ilst items.
         """
         self.liststore.clear()
+        self.filenames = []
         if (data.get_text() is not ''):
             self.get_list_items(data.get_text().lower())
+    
+    def on_stop_BTN_pressed(self, data):
+        self.dialogbox.hide()
+        self.window2.show_all()
         
     def destroy(self,widget, data = None):
     	gtk.main_quit()
