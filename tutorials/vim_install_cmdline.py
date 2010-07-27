@@ -24,7 +24,15 @@ class CommandLineInstall(Tutorial):
 
 	header = 'How to install via commandline'
 	
-	Description = 'This is the CommandLine Install Tutorial Description'
+	line = ['To install something by typing commands you need to',
+			"\n- Click on 'Applications' menu ,from gnome-panel, on the top-left corner",
+			"\n- Click on 'Accessories' menu item from the menu and select 'Terminal'",
+			"\n- After the window opens type the command 'sudo apt-get install <app-name>'",
+			"\n- Enter password if and when prompted"]
+	
+	Description = line[0] + line[1] + line[2] + line[3] + line[4]
+	
+	tags = 'Installation Command Line terminal apt get'
 	
 	def mainProgram(self):
 		""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.

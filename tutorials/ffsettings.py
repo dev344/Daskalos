@@ -20,7 +20,17 @@ class FirefoxTutorial(Tutorial):
 	
 	header = 'How to change Network Settings in Firefox'
 	
-	Description = 'Firefox Tutorial Description'
+	line = ['To change your network settings in Firefox Web Browser you need to',
+		  "\n- Click on 'Applications' menu ,from gnome-panel, on the top-left corner",
+		  "\n- Click on 'Internet' menu item from the menu and select 'Firefox Web Browser'",
+		  "\n- After the browser opens click on 'Edit' menu ,on top-left, and choose\n' Preferences' menu item",
+		  "\n- After the new window opens click on the 'Advanced' tab,which is on \n top-right",
+		  "\n- Select the 'Network' tab and click on the 'Settings' button and make\n necessary settings" ]
+	
+	Description = line[0] + line[1] + line[2] + line[3] + line[4] + line[5]
+	
+	tags = 'Firefox browser web network settings internet'
+	        
 	def mainProgram(self):
 		""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.
 		"""

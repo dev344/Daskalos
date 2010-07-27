@@ -23,7 +23,17 @@ class SynapticTutorial(Tutorial):
 	
 	header = 'How to install using Synaptic Package Manager'
 	
-	Description = 'This is the Synaptic Tutorial Description'
+	line = ['To install something using syanptic you need to',
+			"\n- Click on 'System' menu ,from gnome-panel, on the top-left",
+			"\n- Click on 'Administration' menu item from the menu and select\n 'Synaptic Package Manager'",
+			"\n- You may need to type your password if you haven't in the near past",
+			"\n- After the window opens type the name of the thing you want to\n install in the search bar(top middle)",
+			"\n- Search for it in the list below.Select it by left clicking beside\n the name",
+			"\n- Select the option'Mark for installation' and don't forget to\n 'Apply'(beside search bar)  ",]
+	
+	Description = line[0] + line[1] + line[2] + line[3] + line[4] + line[5] + line[6]
+	
+	tags = 'Installation Synaptic Package Manager Software'
 	
 	def mainProgram(self):
 		""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.

@@ -28,7 +28,17 @@ class SoftwareSources(Tutorial):
 
 	header = 'How to change default repository'        #May need to state it better
 	
-	Description = 'This is the Software Sources Tutorial Description'
+	line = ['To change your default repository you need to ',
+			"\n- Click on 'System' menu ,from gnome-panel, on the top-left",
+			"\n- Click on 'Administration' menu item from the menu and select\n 'Software Sources'",
+			"\n- You may need to type your password if you haven't in the near past",
+			"\n- After the new window opens click on the 'Ubuntu Software' tab,\n which is on top-left",
+			"\n- In the 'Download from ' options select 'Other..' and choose one repo" ]
+	
+	Description = line[0] + line[1] + line[2] + line[3] + line[4] + line[5]
+	
+	tags = 'Software Sources Install repository '
+	
 	def mainProgram(self):
 		""" In this function things are hardcoded a bit.Also dogtail modules are imported inside.
 		"""
