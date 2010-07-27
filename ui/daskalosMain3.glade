@@ -309,6 +309,7 @@
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
                         <property name="use_stock">True</property>
+                        <signal name="clicked" handler="on_back_BTN_clicked"/>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -448,6 +449,8 @@
     </action-widgets>
   </object>
   <object class="GtkWindow" id="mainwindow1">
+    <property name="height_request">400</property>
+    <property name="title" translatable="yes">Daskalos</property>
     <child>
       <object class="GtkVBox" id="vbox5">
         <property name="visible">True</property>
@@ -606,11 +609,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkEntry" id="entry1">
+              <object class="GtkEntry" id="searchbar0">
                 <property name="width_request">195</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="invisible_char">&#x25CF;</property>
+                <signal name="changed" handler="on_searchbar0_changed"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -631,27 +635,83 @@
               <object class="GtkVBox" id="vbox6">
                 <property name="visible">True</property>
                 <child>
-                  <placeholder/>
+                  <object class="GtkLabel" id="label4">
+                    <property name="width_request">105</property>
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Categories</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="padding">5</property>
+                    <property name="position">0</property>
+                  </packing>
                 </child>
                 <child>
-                  <placeholder/>
+                  <object class="GtkButton" id="button2">
+                    <property name="label" translatable="yes">Category1</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="position">1</property>
+                  </packing>
                 </child>
                 <child>
-                  <placeholder/>
+                  <object class="GtkButton" id="button3">
+                    <property name="label" translatable="yes">Category2</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="position">2</property>
+                  </packing>
                 </child>
                 <child>
-                  <placeholder/>
+                  <object class="GtkButton" id="button4">
+                    <property name="label" translatable="yes">Category3</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="button5">
+                    <property name="label" translatable="yes">Category4</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="position">4</property>
+                  </packing>
                 </child>
                 <child>
                   <placeholder/>
                 </child>
               </object>
               <packing>
+                <property name="expand">False</property>
                 <property name="position">0</property>
               </packing>
             </child>
             <child>
-              <placeholder/>
+              <object class="GtkTreeView" id="treeview">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <signal name="row_activated" handler="on_treeview_row_activated"/>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
             </child>
           </object>
           <packing>
