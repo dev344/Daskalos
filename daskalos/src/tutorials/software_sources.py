@@ -55,7 +55,8 @@ class SoftwareSources(Tutorial):
 		
 	def run(self):
 		self.mainProgram()
-		args = 'cnee --replay --no-synchronise --file ' + sys.argv[1]
+		file_path = os.path.join(os.path.expandvars("$DSK_HOME"), 'src/tutorials/sftwrsrcemouse.xnl')
+		args = 'cnee --replay --no-synchronise --file ' + file_path
 		p = subprocess.Popen(args,shell= True)
 		yield
 		
