@@ -123,7 +123,6 @@ class DaskalosUI:
     	    if self.selected_filename:
                 self.window2.hide()
                 self.dialogbox.show_all()
-                time.sleep(5)
                 self.dialogbox.set_keep_above(True)
         except Exception, e:
             pass
