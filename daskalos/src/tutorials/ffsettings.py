@@ -91,7 +91,7 @@ class FirefoxTutorial(Tutorial):
 		if(not observer.frameFocussed(cnctn_sttngs_win)): 
 			raise Error("Could not focus frame " + cnctn_sttngs_win)
 		
-		def run(self):
+	def run(self):
 			self.mainProgram()
 			yield
 			

@@ -19,10 +19,9 @@ class Dialogbox:
                 daskalosUI.dialogbox.set_keep_above(True)
         except Exception, e:
             pass
-        #try :
-        module = __import__(daskalosUI.selected_filename)
-        time.sleep(1)
-        try:
+        try :
+            module = __import__(daskalosUI.selected_filename)
+            time.sleep(1)
             module.tutorial.part.next()
         except Exception,e:
             reload(module)

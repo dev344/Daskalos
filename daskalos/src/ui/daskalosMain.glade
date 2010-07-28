@@ -356,18 +356,10 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton" id="back_BTN">
-                        <property name="label">gtk-go-back</property>
-                        <property name="width_request">80</property>
+                      <object class="GtkLabel" id="label4">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <property name="use_stock">True</property>
-                        <signal name="clicked" handler="on_back_BTN_clicked"/>
                       </object>
                       <packing>
-                        <property name="expand">False</property>
-                        <property name="padding">7</property>
                         <property name="position">1</property>
                       </packing>
                     </child>
