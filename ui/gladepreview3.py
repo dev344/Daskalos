@@ -54,6 +54,8 @@ class DaskalosUI:
         self.description_label = builder.get_object("description_label")
         self.tutorial_name_label = builder.get_object('tutorial_name_label')
         self.tutorial_name_label.set_label('Tutorial')
+        self.author_name_label = builder.get_object('author_name_label')
+        self.duration_label = builder.get_object('duration_label')
         
         self.start_tut_BTN = builder.get_object('start_tut_BTN')
         self.screenshot = builder.get_object('screenshot')
@@ -132,6 +134,8 @@ class DaskalosUI:
             module = __import__(self.selected_filename)         
             self.description_label.set_label(module.tutorial.Description)
             self.tutorial_name_label.set_label(module.tutorial.header)
+            self.author_name_label.set_label(module.tutorial.Author)
+            self.duration_label.set_label(module.tutorial.duration)
         except Exception, e:
             print 'Unable to import ' + self.selected_filename
         try :
@@ -173,6 +177,11 @@ class DaskalosUI:
         module = __import__(self.selected_filename)         #should include a try here
         self.description_label.set_label(module.tutorial.Description)
         self.tutorial_name_label.set_label(module.tutorial.header)
+        try:
+            self.author_name_label.set_label(module.tutorial.Author)
+            self.duration_label.set_label(module.tutorial.duration)
+        except Exception, e:
+            pass
         screenshot_path = self.images_path + self.selected_filename + '_scaled.png'    # should include a try
         self.screenshot.set_from_file(screenshot_path)
         

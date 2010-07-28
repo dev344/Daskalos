@@ -1,0 +1,23 @@
+* Daskalos is an interactive help application which uses dogtail and xnee for involvong the user and showing how to do things.This application is python based.
+* Our motto is "Tell me and I will surely forget, Show
+				me and I may remember, Involve me and I will learn"
+
+Dependencies :
+--------------
+- dogtail-0.7.0 or later
+- xnee-3.06 or later
+
+Python bindings for your distribution, e.g. python-apt or rpm-python
+
+PyGTK and GNOME-Python
+
+Using :
+-------
+Currently only GNOME and GTK+ applications are supported since dogtail supports only these. KDE 4 should have 
+the accessibility support that will enable you to use dogtail with it.
+
+First, make sure accessibility support is enabled in your GNOME session with:
+  gconftool-2 --type bool --set /desktop/gnome/interface/accessibility true
+You may want to log out and log back in again so that i works properly.
+
+
