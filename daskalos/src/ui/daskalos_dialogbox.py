@@ -17,6 +17,7 @@ class Dialogbox:
                 daskalosUI.window2.hide()
                 daskalosUI.dialogbox.show_all()
                 daskalosUI.dialogbox.set_keep_above(True)
+                daskalosUI.replay_BTN.hide()
         except Exception, e:
             pass
         try :
@@ -31,14 +32,20 @@ class Dialogbox:
         #daskalosUI.run_tutorial()
         #daskalosUI.on_stop_BTN_pressed()
     
-    def dialogbox_next_BTN_clicked(self,daskalosUI):
+    def dialogbox_next_BTN_clicked(self, daskalosUI):
         try :
             module = __import__(daskalosUI.selected_filename)
             module.tutorial.part.next()
         except Exception, e:
-            message = 'The tutorial has ended!\n Press return to go back.'
+            message = 'The tutorial has ended!\n Press return to go back\n or replay to show it again.'
             daskalosUI.dialog_description_label.set_label(message)
             daskalosUI.stop_BTN.set_label('Return')
             daskalosUI.next_BTN.hide()
+            daskalosUI.replay_BTN.show()
+        
+    def dialogbox_replay_BTN_clicked(self, daskalosUI):
+        daskalosUI.stop_BTN.set_label('Stop')
+        daskalosUI.dialog_description_label.set_label('')
+        self.mainwindow_start_tut_BTN(daskalosUI)
         
 dialogboxUI = Dialogbox()

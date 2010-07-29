@@ -17,7 +17,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import sys
+import sys,os
 import time
 from tutorial import *
 import subprocess
