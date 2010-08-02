@@ -7,6 +7,9 @@
 # Other info : This was written for the application Daskalos to be included in the distro 'Shaastra Distro'
 # Contact : shaastra-distro-2010@googlegroups.com
 # ########################################################################################################################
+"""
+	This is the code for the UI dialog box which appears while running tutorials. 
+"""
 import time
 
 class Dialogbox:
@@ -47,7 +50,7 @@ class Dialogbox:
             except Exception :
                 pass
         except Exception, e:
-            message = 'The tutorial has ended!\n Press return to go back\n or replay to show it again.'
+            message = 'The tutorial has ended!\n Press return to go back\n or replay to show it again\n\n Do not forget to close any\n administrative windows if open.'
             daskalosUI.dialog_description_label.set_label(message)
             daskalosUI.stop_BTN.set_label('Return')
             daskalosUI.next_BTN.hide()
