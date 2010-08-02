@@ -33,6 +33,8 @@ class SynapticTutorial(Tutorial):
 	
 	Description = line[0] + line[1] + line[2] + line[3] + line[4] + line[5] + line[6]
 	
+	DialogBox_label = ''
+	
 	tags = 'Installation Synaptic Package Manager Software'
 	
 	def __init__(self):
@@ -59,6 +61,7 @@ class SynapticTutorial(Tutorial):
 		dogtail.rawinput.typeText('vim')
 		
 	def run(self):
+		self.DialogBox_label = 'You can now search your package in the quick\n search bar and then select the required package\n by clicking at the selection button beside the\n name and selecting "Mark for Installation".\n Do not forget to apply this by clicking apply'
 		self.mainProgram()
 		yield
 		

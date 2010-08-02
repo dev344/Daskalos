@@ -35,6 +35,8 @@ class SoftwareSources(Tutorial):
 			"\n- After the new window opens click on the 'Ubuntu Software' tab,\n which is on top-left",
 			"\n- In the 'Download from ' options select 'Other..' and choose one repo" ]
 	
+	DialogBox_label = ''
+	
 	Description = line[0] + line[1] + line[2] + line[3] + line[4] + line[5]
 	
 	tags = 'Software Sources Install repository '
@@ -54,6 +56,7 @@ class SoftwareSources(Tutorial):
 		time.sleep(4)
 		
 	def run(self):
+		self.DialogBox_label = 'Now first choose your country and then\n choose a server from the list.Then click\n on "Choose Server" '
 		self.mainProgram()
 		file_path = os.path.join(os.path.expandvars("$DSK_HOME"), 'src/tutorials/sftwrsrcemouse.xnl')
 		args = 'cnee --replay --no-synchronise --file ' + file_path

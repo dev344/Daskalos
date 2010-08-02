@@ -13,6 +13,7 @@
 
 import gtk, gobject
 import sys, os, subprocess, time
+import keybinder
 
 class DaskalosUI:
 

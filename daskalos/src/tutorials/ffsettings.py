@@ -27,6 +27,8 @@ class FirefoxTutorial(Tutorial):
 		  "\n- After the new window opens click on the 'Advanced' tab,which is on \n top-right",
 		  "\n- Select the 'Network' tab and click on the 'Settings' button and make\n necessary settings" ]
 	
+	DialogBox_label = ''
+	
 	Description = line[0] + line[1] + line[2] + line[3] + line[4] + line[5]
 	
 	tags = 'Firefox browser web network settings internet'
@@ -92,8 +94,9 @@ class FirefoxTutorial(Tutorial):
 			raise Error("Could not focus frame " + cnctn_sttngs_win)
 		
 	def run(self):
-			self.mainProgram()
-			yield
+		self.DialogBox_label = 'Now you can set your network settings here by\n filling up the appropriate fields'
+		self.mainProgram()
+		yield
 			
 tutorial = FirefoxTutorial()	
 	

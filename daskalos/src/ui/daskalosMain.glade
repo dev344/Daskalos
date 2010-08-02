@@ -226,8 +226,11 @@
                     <property name="height_request">29</property>
                     <property name="visible">True</property>
                     <child>
-                      <object class="GtkLabel" id="empty_label">
+                      <object class="GtkLabel" id="label55">
                         <property name="visible">True</property>
+                        <attributes>
+                          <attribute name="weight" value="bold"/>
+                        </attributes>
                       </object>
                       <packing>
                         <property name="position">0</property>

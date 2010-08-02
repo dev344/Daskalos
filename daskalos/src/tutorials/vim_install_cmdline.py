@@ -30,6 +30,8 @@ class CommandLineInstall(Tutorial):
 			"\n- After the window opens type the command 'sudo apt-get install <app-name>'",
 			"\n- Enter password if and when prompted"]
 	
+	DialogBox_label = ''
+	
 	Description = line[0] + line[1] + line[2] + line[3] + line[4]
 	
 	tags = 'Installation Command Line terminal apt get'
@@ -63,10 +65,11 @@ class CommandLineInstall(Tutorial):
 		if(not observer.frameFocussed(frameName)): 
 			raise Error("Could not focus frame " + frameName)
 		
-		type("sudo apt-get install vim ")
-		keyCombo("Return")                                                      #i am still debating whether to include this line or not
+		type("sudo apt-get install ")
+		#keyCombo("Return")                                                      #i am still debating whether to include this line or not
 		
 	def run(self):
+		self.DialogBox_label = 'Now enter the name of the package you want\n to install and press enter.\n Then enter your administrative password which\n you will not be able to see while typing'
 		self.mainProgram()
 		yield
 		

@@ -24,18 +24,28 @@ class Dialogbox:
             module = __import__(daskalosUI.selected_filename)
             time.sleep(1)
             module.tutorial.part.next()
+            try :
+                daskalosUI.dialog_description_label.set_label( module.tutorial.DialogBox_label )
+            except Exception :
+                pass
         except Exception,e:
             reload(module)
             module.tutorial.part.next()
-        #except Exception, e:
-        #    print "Couldn't import ", daskalosUI.selected_filename
-        #daskalosUI.run_tutorial()
-        #daskalosUI.on_stop_BTN_pressed()
+            try :
+                daskalosUI.dialog_description_label.set_label( module.tutorial.DialogBox_label )
+            except Exception :
+                pass
+            
+
     
     def dialogbox_next_BTN_clicked(self, daskalosUI):
         try :
             module = __import__(daskalosUI.selected_filename)
             module.tutorial.part.next()
+            try :
+                daskalosUI.dialog_description_label.set_label( module.tutorial.DialogBox_label )
+            except Exception :
+                pass
         except Exception, e:
             message = 'The tutorial has ended!\n Press return to go back\n or replay to show it again.'
             daskalosUI.dialog_description_label.set_label(message)
