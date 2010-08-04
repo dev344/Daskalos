@@ -13,7 +13,6 @@
 
 import gtk, gobject
 import sys, os, subprocess, time
-import keybinder
 
 class DaskalosUI:
 
@@ -141,8 +140,11 @@ class DaskalosUI:
             self.duration_label.set_label(module.tutorial.duration)
         except Exception, e:
             pass
-        screenshot_path = self.images_path + self.selected_filename + '_scaled.png'    # should include a try
-        self.screenshot.set_from_file(screenshot_path)
+        try :
+            screenshot_path = self.images_path + self.selected_filename + '_scaled.png'  
+            self.screenshot.set_from_file(screenshot_path)
+        except Exception, e:
+            pass
         
     def searchbar_changed(self, data):
         """
