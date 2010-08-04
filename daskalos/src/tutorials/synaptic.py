@@ -15,15 +15,19 @@
 # -*- coding: utf-8 -*-
 import time
 
-from tutorial import Tutorial
-
+try :
+	from tutorial import Tutorial
+except ImportError :
+	print 'Couldnot import tutorial.py'
 
 
 class SynapticTutorial(Tutorial):
 	
 	header = 'How to install using Synaptic Package Manager'
 	
-	line = ['To install something using syanptic you need to',
+	Description = ''
+	
+	lines = ['To install something using syanptic you need to',
 			"\n- Click on 'System' menu ,from gnome-panel, on the top-left",
 			"\n- Click on 'Administration' menu item from the menu and select\n 'Synaptic Package Manager'",
 			"\n- You may need to type your password if you haven't in the near past",
@@ -31,7 +35,8 @@ class SynapticTutorial(Tutorial):
 			"\n- Search for it in the list below.Select it by left clicking beside\n the name",
 			"\n- Select the option'Mark for installation' and don't forget to\n 'Apply'(beside search bar)  ",]
 	
-	Description = line[0] + line[1] + line[2] + line[3] + line[4] + line[5] + line[6]
+	for line in lines :
+		Description = Description + line
 	
 	DialogBox_label = ''
 	
@@ -50,7 +55,7 @@ class SynapticTutorial(Tutorial):
 		observer = Observer()                              
 		
 		
-		observer.openWindowFromMenu('System', 'Administration', 'Synaptic Package Manager')
+		observer.openWindowFromMenu(['System', 'Administration', 'Synaptic Package Manager'])
 		#frameName = 'Synaptic Package Manager'
 		#if(not observer.frameFocussed(frameName,1)): 
 		#	raise Error("Could not focus frame " + frameName)

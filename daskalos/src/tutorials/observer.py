@@ -11,9 +11,14 @@
 		Here there are some functions which the tutorials of Daskalos use to run.Functions like focus.application,click etc
 		are all part of dogtail.procedural module.
 """
+import sys
 
-
-from dogtail.procedural import *
+try :
+	from dogtail.procedural import *
+except ImportError :
+	print "dogtail doesn't seem to be installed.It is also important to have dogtail0.7.0 or above."
+	sys.exit
+	
 import time
 
 class Error(Exception):
@@ -39,24 +44,21 @@ class Observer():
 		if(attemptNum == trylimit): raise Error ("Could not focus the frame " + frameName)
 		else: return True
 		
-	def searchApp(self):
-		"""Just an idea.Have to see if something comes out of it.
-		"""
-		# Synaptic = ('Sytem', 'Administration', 'Synaptic Package Manager')
-		# Software Sources = ('Sytem', 'Administration', 'Software Souces')
-		# Users and groups = ('Sytem', 'Administration', 'Users and Groups')
-		# Time and Date = ('Sytem', 'Administration', 'Time and Date')
-		# Startup Manger = ('Sytem', 'Administration', 'StartUp-Manager')
-		# Login Screen = ('Sytem', 'Administration', 'Login Screen')
-		# Network Tools = ('Sytem', 'Administration', 'Network Tools')
-		# Firefox Web Browser = ('Applications', 'Internet' ,'Firefox Web Browser')
-		# Gedit Text Editor = ('Applications', 'Accessories', 'gedit Text Editor')
-		# Gvim Text Editor = ('Applications', 'Accessories', 'Gvim Text Editor')
-		# Kate Text Editor = ('Applications', 'Accessories', 'Kate')
-		# Gnome Terminal = ('Applications', 'Accessories', 'Terminal')
-		pass
+	dictionary = {'Synaptic Package Manager' : ('Sytem', 'Administration', 'Synaptic Package Manager'),
+		 				'Software Sources' : ('Sytem', 'Administration', 'Software Souces'),
+		 				'Users and groups' : ('Sytem', 'Administration', 'Users and Groups'),
+		 				'Time and Date' : ('Sytem', 'Administration', 'Time and Date'),
+		 				'Startup Manger' : ('Sytem', 'Administration', 'StartUp-Manager'),
+		 				'Login Screen' : ('Sytem', 'Administration', 'Login Screen'),
+		 				'Network Tools' : ('Sytem', 'Administration', 'Network Tools'),
+		 				'Firefox Web Browser' : ('Applications', 'Internet' ,'Firefox Web Browser'),
+		 				'Gedit Text Editor' : ('Applications', 'Accessories', 'gedit Text Editor'),
+		 				'Gvim Text Editor' : ('Applications', 'Accessories', 'Gvim Text Editor'),
+		 				'Kate Text Editor' : ('Applications', 'Accessories', 'Kate'),
+		 				'Gnome Terminal' : ('Applications', 'Accessories', 'Terminal')}
 		
-	def openWindowFromMenu(self,*args):
+		
+	def openWindowFromMenu(self,args):
 		"""This functions should open the window of applications which are there in gnome panel
 		"""
 		if(not self.isFocussed('gnome-panel')): 

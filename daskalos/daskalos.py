@@ -3,10 +3,12 @@
 # Written by : Devesh Yamparala
 # Mentored by : Arun Chaganty
 # For Application : Daskalos
-# Applications used here : Dogtail-0.7.0
 # Other info : This was written for the application Daskalos to be included in the distro 'Shaastra Distro'
 # Contact : shaastra-distro-2010@googlegroups.com
 # ########################################################################################################################
+"""
+    This is the main script that needs to be run to start daskalos.
+"""
 
 import sys, os
 

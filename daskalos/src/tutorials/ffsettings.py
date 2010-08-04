@@ -20,7 +20,9 @@ class FirefoxTutorial(Tutorial):
 	
 	header = 'How to change Network Settings in Firefox'
 	
-	line = ['To change your network settings in Firefox Web Browser you need to',
+	Description = ''
+	
+	lines = ['To change your network settings in Firefox Web Browser you need to',
 		  "\n- Click on 'Applications' menu ,from gnome-panel, on the top-left corner",
 		  "\n- Click on 'Internet' menu item from the menu and select 'Firefox Web Browser'",
 		  "\n- After the browser opens click on 'Edit' menu ,on top-left, and choose\n' Preferences' menu item",
@@ -29,7 +31,8 @@ class FirefoxTutorial(Tutorial):
 	
 	DialogBox_label = ''
 	
-	Description = line[0] + line[1] + line[2] + line[3] + line[4] + line[5]
+	for line in lines :
+		Description = Description + line
 	
 	tags = 'Firefox browser web network settings internet'
 	
@@ -41,7 +44,7 @@ class FirefoxTutorial(Tutorial):
 		"""
 		####types####
 		# observer : object of class Observer
-		# children_of_firefox : list of objects of class Accessibility.Accessible    *i think
+		# children_of_firefox : list of objects of class Accessibility.Accessible    
 		# prefWindowNum,newWindowNum : integer
 		# frameName = string
 		
@@ -52,8 +55,8 @@ class FirefoxTutorial(Tutorial):
 		observer = Observer()                              
 	
 	
-		observer.openWindowFromMenu('Applications', 'Internet', 'Firefox Web Browser')
-		if(not observer.isFocussed('Firefox')):                         #if i can somehow avaid such statements i can make this code more general i think
+		observer.openWindowFromMenu(['Applications', 'Internet', 'Firefox Web Browser'])
+		if(not observer.isFocussed('Firefox')):                         #if i can somehow avoid such statements i can make this code more general i think
 			raise Error("Could not focus Firefox")       
     
 		children_of_firefox = FocusApplication.node.children

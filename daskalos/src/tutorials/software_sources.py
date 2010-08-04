@@ -28,7 +28,9 @@ class SoftwareSources(Tutorial):
 
 	header = 'How to change default repository'        #May need to state it better
 	
-	line = ['To change your default repository you need to ',
+	Description = ''
+	
+	lines = ['To change your default repository you need to ',
 			"\n- Click on 'System' menu ,from gnome-panel, on the top-left",
 			"\n- Click on 'Administration' menu item from the menu and select\n 'Software Sources'",
 			"\n- You may need to type your password if you haven't in the near past",
@@ -37,7 +39,8 @@ class SoftwareSources(Tutorial):
 	
 	DialogBox_label = ''
 	
-	Description = line[0] + line[1] + line[2] + line[3] + line[4] + line[5]
+	for line in lines :
+		Description = Description + line
 	
 	tags = 'Software Sources Install repository '
 	
@@ -52,7 +55,7 @@ class SoftwareSources(Tutorial):
 		
 		observer = Observer()                              
 		
-		observer.openWindowFromMenu('System', 'Administration', 'Software Sources')
+		observer.openWindowFromMenu(['System', 'Administration', 'Software Sources'])
 		time.sleep(4)
 		
 	def run(self):

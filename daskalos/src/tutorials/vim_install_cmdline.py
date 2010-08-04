@@ -24,7 +24,9 @@ class CommandLineInstall(Tutorial):
 
 	header = 'How to install via commandline'
 	
-	line = ['To install something by typing commands you need to',
+	Description = ''
+	
+	lines = ['To install something by typing commands you need to',
 			"\n- Click on 'Applications' menu ,from gnome-panel, on the top-left corner",
 			"\n- Click on 'Accessories' menu item from the menu and select 'Terminal'",
 			"\n- After the window opens type the command 'sudo apt-get install <app-name>'",
@@ -32,7 +34,8 @@ class CommandLineInstall(Tutorial):
 	
 	DialogBox_label = ''
 	
-	Description = line[0] + line[1] + line[2] + line[3] + line[4]
+	for line in lines :
+		Description = Description + line
 	
 	tags = 'Installation Command Line terminal apt get'
 	
@@ -55,7 +58,7 @@ class CommandLineInstall(Tutorial):
 		observer = Observer()  
 	
 	
-		observer.openWindowFromMenu('Applications', 'Accessories', 'Terminal')
+		observer.openWindowFromMenu(['Applications', 'Accessories', 'Terminal'])
 		if(not observer.isFocussed('gnome-terminal')): 
 			raise Error("Could not focus gnome-termnal")
 		

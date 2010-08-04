@@ -12,7 +12,7 @@ Python bindings for your distribution, e.g. python-apt or rpm-python
 
 PyGTK and GNOME-Python
 
-Using :
+Usage :
 -------
 Currently only GNOME and GTK+ applications are supported since dogtail 
 supports only these. KDE 4 should have the accessibility support that
@@ -26,6 +26,32 @@ Important
 ---------
 Make sure no adminstrative window is open like synaptic package manager, 
 software sources, network settings while running daskalos.
+
+
+How to write tutorials
+-----------------------
+The structure of the tutorial can be understood by going through any of the 
+tutorial codes.To write a tutorial of your own you can use the help of an 
+application called 'Accerciser'.You can also use dogtail-recorder alongwith 
+it.With the help of these two applications and the module observer in daskalos
+folder you can start writing a tutorial in no time :)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
