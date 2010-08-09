@@ -45,6 +45,7 @@ class DaskalosUI:
         treeview1 = builder.get_object("treeview1")
         self.liststore1 = self.init_treeview(treeview1)
         self.filenames = []
+        self.menu_item_names = []
         self.get_list_items('', self.liststore1)                    #initially lists all tutorials
         treeview1.set_reorderable(False)
         self.description_label = builder.get_object("description_label")
@@ -69,6 +70,7 @@ class DaskalosUI:
                 
         searchbar = builder.get_object('searchbar')
         self.window2.show_all()
+        self.start_tut_BTN.hide()
 
         raw_input("Press any key to quit")
         
@@ -106,19 +108,35 @@ class DaskalosUI:
                         self.filenames.append(shortname)
                 except Exception, e:
                     pass
-                
+        try :
+            module = __import__('observer')
+            for key in module.observer.dictionary.keys():
+                if(substring in module.observer.dictionary[key][1].lower()):
+                    liststore.append([key])
+                    self.menu_item_names.append(key)
+        except Exception :
+            pass
        
     def start_tut_BTN_button_press_event(self, data1, data2):
         """
             Called when start tutorial button is pressed in window2
         """
-        #try :
-        daskalos_ui_path = os.path.join(os.path.expandvars("$DSK_HOME"), 'src/ui/')
-        sys.path.append(daskalos_ui_path)
-        module = __import__('daskalos_dialogbox')
-        module.dialogboxUI.mainwindow_start_tut_BTN(self)
-        #except Exception, e:
-        #    print 'Could not import daskalos_dialogbox.py '
+        if (self.start_tut_BTN.get_label() == 'Start Tutorial') :
+            try :
+                daskalos_ui_path = os.path.join(os.path.expandvars("$DSK_HOME"), 'src/ui/')
+                sys.path.append(daskalos_ui_path)
+                module = __import__('daskalos_dialogbox')
+                module.dialogboxUI.mainwindow_start_tut_BTN(self)
+            except Exception, e:
+                print 'Could not import daskalos_dialogbox.py '
+        else :
+            try :
+                module = __import__('observer')
+                menu_list = module.observer.dictionary[self.selected_menu_item_name][0]
+                time.sleep(1)
+                module.observer.openWindowFromMenu(menu_list)
+            except Exception :
+                pass
                 
     def run_tutorial(self, data1, data2):                
         #used it to debug things can be used to add some feature later if possible
@@ -131,20 +149,39 @@ class DaskalosUI:
             to the corresponding file and extracts the descripton from that file and 
             gets the respective screenshot also .
         """
-        self.selected_filename = self.filenames[treeview.get_cursor()[0][0]]
-        module = __import__(self.selected_filename)         #should include a try here
-        self.description_label.set_label(module.tutorial.Description)
-        self.tutorial_name_label.set_label(module.tutorial.header)
-        try:
-            self.author_name_label.set_label(module.tutorial.Author)
-            self.duration_label.set_label(module.tutorial.duration)
-        except Exception, e:
-            pass
         try :
-            screenshot_path = self.images_path + self.selected_filename + '_scaled.png'  
-            self.screenshot.set_from_file(screenshot_path)
-        except Exception, e:
-            pass
+            self.selected_filename = self.filenames[treeview.get_cursor()[0][0]]
+            module = __import__(self.selected_filename)         #should include a try here
+            self.description_label.set_label(module.tutorial.Description)
+            self.tutorial_name_label.set_label(module.tutorial.header)
+            try:
+                self.author_name_label.set_label(module.tutorial.Author)
+                self.duration_label.set_label(module.tutorial.duration)
+                self.start_tut_BTN.show()
+                self.start_tut_BTN.set_label('Start Tutorial')
+            except Exception, e:
+                pass
+            try :
+                self.screenshot.show()
+                screenshot_path = self.images_path + self.selected_filename + '_scaled.png'  
+                self.screenshot.set_from_file(screenshot_path)
+            except Exception, e:
+                pass
+        except IndexError, e:
+            self.selected_menu_item_name = self.menu_item_names[(treeview.get_cursor()[0][0] - len(self.filenames))]
+            module = __import__('observer')
+            try :
+                self.description_label.set_label(module.observer.dictionary[self.selected_menu_item_name][1])
+                screenshot_path = self.images_path + 'daskalos_opening.png'  
+                self.screenshot.hide()
+                self.author_name_label.set_label('')
+                self.duration_label.set_label('')
+                self.start_tut_BTN.show()
+                self.start_tut_BTN.set_label('Take Me There')
+            except Exception :
+                pass
+        except Exception :
+            print 'Import Error'
         
     def searchbar_changed(self, data):
         """
@@ -154,6 +191,7 @@ class DaskalosUI:
         """
         self.liststore1.clear()
         self.filenames = []
+        self.menu_item_names = []
         self.get_list_items(data.get_text().lower(), self.liststore1)
             
     def on_stop_BTN_pressed(self, data = None):

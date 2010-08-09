@@ -43,20 +43,7 @@ class Observer():
 			time.sleep(1)
 		if(attemptNum == trylimit): raise Error ("Could not focus the frame " + frameName)
 		else: return True
-		
-	dictionary = {'Synaptic Package Manager' : ('Sytem', 'Administration', 'Synaptic Package Manager'),
-		 				'Software Sources' : ('Sytem', 'Administration', 'Software Souces'),
-		 				'Users and groups' : ('Sytem', 'Administration', 'Users and Groups'),
-		 				'Time and Date' : ('Sytem', 'Administration', 'Time and Date'),
-		 				'Startup Manger' : ('Sytem', 'Administration', 'StartUp-Manager'),
-		 				'Login Screen' : ('Sytem', 'Administration', 'Login Screen'),
-		 				'Network Tools' : ('Sytem', 'Administration', 'Network Tools'),
-		 				'Firefox Web Browser' : ('Applications', 'Internet' ,'Firefox Web Browser'),
-		 				'Gedit Text Editor' : ('Applications', 'Accessories', 'gedit Text Editor'),
-		 				'Gvim Text Editor' : ('Applications', 'Accessories', 'Gvim Text Editor'),
-		 				'Kate Text Editor' : ('Applications', 'Accessories', 'Kate'),
-		 				'Gnome Terminal' : ('Applications', 'Accessories', 'Terminal')}
-		
+		 	
 		
 	def openWindowFromMenu(self,args):
 		"""This functions should open the window of applications which are there in gnome panel
@@ -67,6 +54,32 @@ class Observer():
 		click(args[0], roleName='menu')
 		click(args[1], roleName='menu')
 		click(args[2], roleName='menu item')
+	
+	description = ["""Synaptic is a graphical package management tool which enables\n you to install, upgrade and remove software packages in a user\n friendly way.
+				   """,
+				   	'Software Sources',
+				   	'Users and groups',
+				   	'Time and Date' ,
+				   	'Startup Manger',
+				   	'Login Screen',
+				   	'Network Tools',
+				   	'Firefox Web Browser',
+				   	'Gedit Text Editor',
+				   	'Kate Text Editor',
+				   	'Gnome Terminal']
+				   
+	dictionary = {'Synaptic Package Manager' : [('System', 'Administration', 'Synaptic Package Manager'), description[0]] ,
+		 				'Software Sources' : [('System', 'Administration', 'Software Souces'), description[1]] ,
+		 				'Users and groups' : [('System', 'Administration', 'Users and Groups'), description[2]] ,
+		 				'Time and Date' : [('System', 'Administration', 'Time and Date'), description[3]] ,
+		 				'Startup Manger' : [('System', 'Administration', 'StartUp-Manager'), description[4]] ,
+		 				'Login Screen' : [('System', 'Administration', 'Login Screen'), description[5]] ,
+		 				'Network Tools' : [('System', 'Administration', 'Network Tools'), description[6]] ,
+		 				'Firefox Web Browser' : [('Applications', 'Internet' ,'Firefox Web Browser'), description[7]] ,
+		 				'Gedit Text Editor' : [('Applications', 'Accessories', 'gedit Text Editor'), description[8]],
+		 				'Kate Text Editor' : [('Applications', 'Accessories', 'Kate'), description[9]] ,
+		 				'Gnome Terminal' : [('Applications', 'Accessories', 'Terminal'), description[10]] }
+		 				
+	
 		
-		
-		
+observer = Observer()	
