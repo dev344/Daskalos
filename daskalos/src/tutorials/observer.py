@@ -58,27 +58,25 @@ class Observer():
 	description = ["""Synaptic is a graphical package management tool which enables\n you to install, upgrade and remove software packages in a user\n friendly way.
 				   """,
 				   	'Software Sources',
-				   	'Users and groups',
-				   	'Time and Date' ,
+				   	'You can add and delete users here and also set and change ',
+				   	'Change system time date and timezone' ,
 				   	'Startup Manger',
-				   	'Login Screen',
+				   	'Configure Login Screen',
 				   	'Network Tools',
-				   	'Firefox Web Browser',
-				   	'Gedit Text Editor',
-				   	'Kate Text Editor',
+				   	'Firefox delivers safe, easy web browsing. A familiar user interface,\nenhanced security features including protection from online identity\n theft,and integrated search let you get the most out of the web.',
+				   	'gedit is a text editor which supports most standard editor features,\n extending this basic functionality with other features not usually\n found in simple text editors. gedit is a graphical application which\n supports editing multiple text files in one window (known sometimes as\n tabs or MDI).',
 				   	'Gnome Terminal']
 				   
 	dictionary = {'Synaptic Package Manager' : [('System', 'Administration', 'Synaptic Package Manager'), description[0]] ,
 		 				'Software Sources' : [('System', 'Administration', 'Software Souces'), description[1]] ,
 		 				'Users and groups' : [('System', 'Administration', 'Users and Groups'), description[2]] ,
 		 				'Time and Date' : [('System', 'Administration', 'Time and Date'), description[3]] ,
-		 				'Startup Manger' : [('System', 'Administration', 'StartUp-Manager'), description[4]] ,
+		 				'Startup Manager' : [('System', 'Administration', 'StartUp-Manager'), description[4]] ,
 		 				'Login Screen' : [('System', 'Administration', 'Login Screen'), description[5]] ,
 		 				'Network Tools' : [('System', 'Administration', 'Network Tools'), description[6]] ,
 		 				'Firefox Web Browser' : [('Applications', 'Internet' ,'Firefox Web Browser'), description[7]] ,
 		 				'Gedit Text Editor' : [('Applications', 'Accessories', 'gedit Text Editor'), description[8]],
-		 				'Kate Text Editor' : [('Applications', 'Accessories', 'Kate'), description[9]] ,
-		 				'Gnome Terminal' : [('Applications', 'Accessories', 'Terminal'), description[10]] }
+		 				'Gnome Terminal' : [('Applications', 'Accessories', 'Terminal'), description[9]] }
 		 				
 	
 		
