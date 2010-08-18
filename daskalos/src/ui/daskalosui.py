@@ -30,13 +30,22 @@ class DaskalosUI:
                                 'on_stop_BTN_pressed' : self.on_stop_BTN_pressed,
                                 'gtk_main_quit' : self.destroy, 
                                 'on_next_BTN_clicked' : self.next_BTN_clicked,
-                                'on_replay_BTN_clicked' : self.replay_BTN_clicked }
+                                'on_replay_BTN_clicked' : self.replay_BTN_clicked,
+                                'on_add_tut_BTN_pressed' : self.add_tut_BTN_pressed,
+                                'on_cancel_add_tut_BTN_pressed' : self.cancel_add_tut_BTN_pressed,
+                                'on_add_add_tut_BTN_pressed' : self.add_add_tut_BTN_pressed,
+                                'on_ok_BTN_pressed' : self.ok_BTN_pressed,
+                                'on_about_menu_item_press' : self.about_menu_item_press,
+                                'on_add_tut_menu_item_press' : self.add_tut_menu_item_press }
                                 
         builder.connect_signals( signal_connections )
         
         self.window2 = builder.get_object("mainwindow2")
         self.window2.set_title("Daskalos")
         self.dialogbox = builder.get_object("dialogbox")
+        self.filechooserdialog = builder.get_object('filechooserdialog')
+        self.messagedialog = builder.get_object('messagedialog')
+        self.aboutdialog = builder.get_object('aboutdialog')
         try:
             self.window2.set_icon_from_file("Daskalos.jpg")
         except Exception, e:
@@ -48,10 +57,12 @@ class DaskalosUI:
         self.menu_item_names = []
         self.get_list_items('', self.liststore1)                    #initially lists all tutorials
         treeview1.set_reorderable(False)
+        
         self.description_label = builder.get_object("description_label")
         self.description_label.set_label('Select any tutorial from the list on the left or\n search in the searchbar above')
         self.tutorial_name_label = builder.get_object('tutorial_name_label')
-        self.tutorial_name_label.set_label('Tutorial')
+        self.by_label = builder.get_object('by_label')
+        self.approx_duration_label = builder.get_object('approx_duration_label')
         self.author_name_label = builder.get_object('author_name_label')
         self.duration_label = builder.get_object('duration_label')
         self.dialog_description_label = builder.get_object('dialog_description_label')
@@ -71,6 +82,9 @@ class DaskalosUI:
         searchbar = builder.get_object('searchbar')
         self.window2.show_all()
         self.start_tut_BTN.hide()
+        self.by_label.hide()
+        self.approx_duration_label.hide()
+        self.tutorial_name_label.hide()
 
         raw_input("Press any key to quit")
         
@@ -83,6 +97,9 @@ class DaskalosUI:
         col0 = gtk.TreeViewColumn("   Tutorials", cell0, text = 0)
         treeview1.append_column(col0)
         
+        treestore = gtk.TreeStore(str)
+        treestore.append(None, ['Detailed Tutorials'])
+        treestore.append(None, ['Take-me-there Tutorials'])
         liststore = gtk.ListStore( gobject.TYPE_STRING)
         treeview1.set_model(liststore)
         
@@ -154,6 +171,9 @@ class DaskalosUI:
             module = __import__(self.selected_filename)         #should include a try here
             self.description_label.set_label(module.tutorial.Description)
             self.tutorial_name_label.set_label(module.tutorial.header)
+            self.by_label.show()
+            self.approx_duration_label.show()
+            self.tutorial_name_label.show()
             try:
                 self.author_name_label.set_label(module.tutorial.Author)
                 self.duration_label.set_label(module.tutorial.duration)
@@ -231,7 +251,33 @@ class DaskalosUI:
     	print 'Quitting'
         gtk.main_quit()
 
+    def add_tut_BTN_pressed(self, data = None):
+        self.filechooserdialog.show()
+        
+    def add_tut_menu_item_press(self, data1 = None, data2 = None):
+        self.filechooserdialog.show()
+        
+    def add_add_tut_BTN_pressed(self, data = None):
+        complete_filename = self.filechooserdialog.get_filename()
+        ( file_with_location, extension) = os.path.splitext(complete_filename)
+        if (extension == '.py'):
+            command = 'cp ' + complete_filename + ' ' + os.path.join(os.path.expandvars("$DSK_HOME"), 'src/tutorials/',os.path.basename(complete_filename))
+            os.system(command)
+        else :
+            self.messagedialog.show()
+        
+    def cancel_add_tut_BTN_pressed(self, data = None):
+        self.filechooserdialog.hide()
+    
+    def ok_BTN_pressed(self, data = None):
+        self.messagedialog.hide()
+    
+    def about_menu_item_press(self, data1 =None, data2 = None):
+        self.aboutdialog.run()
+        self.aboutdialog.hide()       
 
+        
+    
 daskalosUI = DaskalosUI()
     	
 if __name__ == "__main__":

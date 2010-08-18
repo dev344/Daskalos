@@ -57,15 +57,15 @@ class Observer():
 	
 	description = ["""Synaptic is a graphical package management tool which enables\n you to install, upgrade and remove software packages in a user\n friendly way.
 				   """,
-				   	'Software Sources',
-				   	'You can add and delete users here and also set and change ',
+				   	'At software sources you can configure the sources for installable software\n and updates',
+				   	'At users and groups you can add and delete users and also set and \nchange passwords',
 				   	'Change system time date and timezone' ,
 				   	'Startup Manger',
-				   	'Configure Login Screen',
-				   	'Network Tools',
+				   	'You can configure Login Screen',
+				   	'Network Tools is where you can view information about your network',
 				   	'Firefox delivers safe, easy web browsing. A familiar user interface,\nenhanced security features including protection from online identity\n theft,and integrated search let you get the most out of the web.',
 				   	'gedit is a text editor which supports most standard editor features,\n extending this basic functionality with other features not usually\n found in simple text editors. gedit is a graphical application which\n supports editing multiple text files in one window (known sometimes as\n tabs or MDI).',
-				   	'Gnome Terminal']
+				   	'GNOME Terminal is a terminal emulation application where you can\n choose to play around with commands if you like.']
 				   
 	dictionary = {'Synaptic Package Manager' : [('System', 'Administration', 'Synaptic Package Manager'), description[0]] ,
 		 				'Software Sources' : [('System', 'Administration', 'Software Souces'), description[1]] ,

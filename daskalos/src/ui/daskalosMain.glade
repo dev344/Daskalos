@@ -5,24 +5,99 @@
   <object class="GtkListStore" id="liststore1"/>
   <object class="GtkWindow" id="mainwindow2">
     <property name="width_request">785</property>
-    <property name="height_request">650</property>
+    <property name="height_request">660</property>
     <property name="window_position">center</property>
     <signal name="destroy" handler="gtk_main_quit"/>
     <child>
       <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
         <child>
-          <object class="GtkMenuBar" id="menubar1">
+          <object class="GtkHBox" id="hbox4">
             <property name="visible">True</property>
             <child>
-              <object class="GtkMenuItem" id="menuitem3">
+              <object class="GtkMenuBar" id="menubar1">
                 <property name="visible">True</property>
-                <property name="use_underline">True</property>
+                <child>
+                  <object class="GtkMenuItem" id="menuitem1">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">_File</property>
+                    <property name="use_underline">True</property>
+                    <child type="submenu">
+                      <object class="GtkMenu" id="menu1">
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkImageMenuItem" id="add_tut_menu_item">
+                            <property name="label">Add Tutorial</property>
+                            <property name="visible">True</property>
+                            <property name="image">image1</property>
+                            <property name="use_stock">False</property>
+                            <signal name="button_press_event" handler="on_add_tut_menu_item_press"/>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkSeparatorMenuItem" id="separatormenuitem1">
+                            <property name="visible">True</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkImageMenuItem" id="imagemenuitem5">
+                            <property name="label">gtk-quit</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkMenuItem" id="menuitem4">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">_Help</property>
+                    <property name="use_underline">True</property>
+                    <child type="submenu">
+                      <object class="GtkMenu" id="menu3">
+                        <property name="visible">True</property>
+                        <child>
+                          <object class="GtkImageMenuItem" id="about_menu_item">
+                            <property name="label">gtk-about</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="button_press_event" handler="on_about_menu_item_press"/>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
               </object>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="add_tut_BTN">
+                <property name="label" translatable="yes">Add Tutorial</property>
+                <property name="width_request">95</property>
+                <property name="height_request">35</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Add a downloaded or self-written tutorial</property>
+                <signal name="pressed" handler="on_add_tut_BTN_pressed"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
             </child>
           </object>
           <packing>
             <property name="expand">False</property>
+            <property name="fill">False</property>
             <property name="position">0</property>
           </packing>
         </child>
@@ -128,7 +203,7 @@
                       <object class="GtkHBox" id="hbox6">
                         <property name="visible">True</property>
                         <child>
-                          <object class="GtkLabel" id="label5">
+                          <object class="GtkLabel" id="by_label">
                             <property name="width_request">36</property>
                             <property name="visible">True</property>
                             <property name="label" translatable="yes">By :</property>
@@ -152,7 +227,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="label6">
+                          <object class="GtkLabel" id="approx_duration_label">
                             <property name="visible">True</property>
                             <property name="label" translatable="yes">Approx. Duration :</property>
                             <attributes>
@@ -298,6 +373,7 @@
   </object>
   <object class="GtkDialog" id="dialogbox">
     <property name="border_width">5</property>
+    <property name="title" translatable="yes">Daskalos</property>
     <property name="type_hint">normal</property>
     <property name="deletable">False</property>
     <property name="has_separator">False</property>
@@ -375,5 +451,154 @@
       <action-widget response="2">next_BTN</action-widget>
       <action-widget response="3">replay_BTN</action-widget>
     </action-widgets>
+  </object>
+  <object class="GtkFileChooserDialog" id="filechooserdialog">
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">Add a tutorial ....</property>
+    <property name="default_width">500</property>
+    <property name="default_height">500</property>
+    <property name="type_hint">normal</property>
+    <property name="has_separator">False</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox2">
+        <property name="visible">True</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area2">
+            <property name="visible">True</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="cancel_add_tut_BTN">
+                <property name="label">gtk-cancel</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+                <signal name="pressed" handler="on_cancel_add_tut_BTN_pressed"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="add_add_tut_BTN">
+                <property name="label">gtk-add</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+                <signal name="pressed" handler="on_add_add_tut_BTN_pressed"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">cancel_add_tut_BTN</action-widget>
+      <action-widget response="0">add_add_tut_BTN</action-widget>
+    </action-widgets>
+  </object>
+  <object class="GtkMessageDialog" id="messagedialog">
+    <property name="border_width">5</property>
+    <property name="type_hint">normal</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="has_separator">False</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox4">
+        <property name="visible">True</property>
+        <property name="spacing">2</property>
+        <child>
+          <object class="GtkLabel" id="label5">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">You have either chosen a file which is not a python 
+file or have chosen a directory to add.Please choose
+ a valid python tutorial to add to the list of tutorials.</property>
+          </object>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area4">
+            <property name="visible">True</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <object class="GtkButton" id="ok_BTN">
+                <property name="label">gtk-ok</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+                <signal name="pressed" handler="on_ok_BTN_pressed"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">ok_BTN</action-widget>
+    </action-widgets>
+  </object>
+  <object class="GtkAboutDialog" id="aboutdialog">
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">About</property>
+    <property name="type_hint">normal</property>
+    <property name="has_separator">False</property>
+    <property name="program_name">Daskalos</property>
+    <property name="authors">Devesh Yamparala&lt;dev344@gmail.com&gt;</property>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox5">
+        <property name="visible">True</property>
+        <property name="spacing">2</property>
+        <child>
+          <object class="GtkLabel" id="label6">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">Daskalos is an interactive help application.</property>
+          </object>
+          <packing>
+            <property name="position">-1</property>
+          </packing>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area"/>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="icon_name">list-add</property>
   </object>
 </interface>
