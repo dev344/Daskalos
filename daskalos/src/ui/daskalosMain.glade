@@ -589,7 +589,10 @@ file or have chosen a directory to add.Please choose
         <child>
           <object class="GtkLabel" id="label6">
             <property name="visible">True</property>
-            <property name="label" translatable="yes">Daskalos is an interactive help application.</property>
+            <property name="label" translatable="yes">Daskalos is an interactive help application.
+
+Daskalos is an application written for project
+Shaastra Distro(2010)</property>
           </object>
           <packing>
             <property name="position">-1</property>

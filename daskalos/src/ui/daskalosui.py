@@ -47,7 +47,10 @@ class DaskalosUI:
         self.messagedialog = builder.get_object('messagedialog')
         self.aboutdialog = builder.get_object('aboutdialog')
         try:
-            self.window2.set_icon_from_file("Daskalos.jpg")
+            self.window2.set_icon_from_file(os.path.join(self.images_path,'icon.jpg'))
+            self.messagedialog.set_icon_from_file(os.path.join(self.images_path,'icon.jpg'))
+            self.aboutdialog.set_icon_from_file(os.path.join(self.images_path,'icon.jpg'))
+            self.filechooserdialog.set_icon_from_file(os.path.join(self.images_path,'icon.jpg'))
         except Exception, e:
             pass
         
