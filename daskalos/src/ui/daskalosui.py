@@ -200,6 +200,7 @@ class DaskalosUI:
                 screenshot_path = self.images_path + 'daskalos_opening.png'  
                 self.screenshot.hide()
                 self.author_name_label.set_label('')
+                self.tutorial_name_label.set_label('')
                 self.duration_label.set_label('')
                 self.start_tut_BTN.show()
                 self.start_tut_BTN.set_label('Take Me There')
