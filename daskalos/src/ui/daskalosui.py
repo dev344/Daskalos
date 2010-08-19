@@ -52,10 +52,11 @@ class DaskalosUI:
             pass
         
         treeview1 = builder.get_object("treeview1")
-        self.liststore1 = self.init_treeview(treeview1)
+        self.treeview = treeview1
+        self.treestore1 = self.init_treeview(treeview1)
         self.filenames = []
         self.menu_item_names = []
-        self.get_list_items('', self.liststore1)                    #initially lists all tutorials
+        self.get_list_items('', self.treestore1)                    #initially lists all tutorials
         treeview1.set_reorderable(False)
         
         self.description_label = builder.get_object("description_label")
@@ -91,21 +92,21 @@ class DaskalosUI:
     def init_treeview(self, treeview1):
         """
             This function initializes the treeview by defining the columns,
-            etc and returns the liststore defined.
+            etc and returns the treestore defined.
         """
         cell0 = gtk.CellRendererText()
         col0 = gtk.TreeViewColumn("   Tutorials", cell0, text = 0)
         treeview1.append_column(col0)
         
         treestore = gtk.TreeStore(str)
-        treestore.append(None, ['Detailed Tutorials'])
-        treestore.append(None, ['Take-me-there Tutorials'])
+        self.detailed_tut = treestore.append(None, ['Detailed Tutorials'])
+        self.tmt_tut = treestore.append(None, ['Take-me-there Tutorials'])
         liststore = gtk.ListStore( gobject.TYPE_STRING)
-        treeview1.set_model(liststore)
+        treeview1.set_model(treestore)
         
-        return liststore
+        return treestore
         
-    def get_list_items(self, substring, liststore):
+    def get_list_items(self, substring, treestore):
         """
             This function gets the list items every time someone searches.
             It searches the tutorials directory and checks if the searchword
@@ -121,7 +122,7 @@ class DaskalosUI:
                 	print 'Error while importing ', shortname
                 try:
                     if((substring in module.tutorial.header.lower()) or (substring in module.tutorial.tags.lower())):
-                        liststore.append([module.tutorial.header])
+                        treestore.append(self.detailed_tut, [module.tutorial.header])
                         self.filenames.append(shortname)
                 except Exception, e:
                     pass
@@ -129,10 +130,11 @@ class DaskalosUI:
             module = __import__('observer')
             for key in module.observer.dictionary.keys():
                 if(substring in module.observer.dictionary[key][1].lower()):
-                    liststore.append([key])
+                    treestore.append(self.tmt_tut, [key])
                     self.menu_item_names.append(key)
         except Exception :
             pass
+        self.treeview.expand_all()
        
     def start_tut_BTN_button_press_event(self, data1, data2):
         """
@@ -166,29 +168,32 @@ class DaskalosUI:
             to the corresponding file and extracts the descripton from that file and 
             gets the respective screenshot also .
         """
-        try :
-            self.selected_filename = self.filenames[treeview.get_cursor()[0][0]]
-            module = __import__(self.selected_filename)         #should include a try here
-            self.description_label.set_label(module.tutorial.Description)
-            self.tutorial_name_label.set_label(module.tutorial.header)
-            self.by_label.show()
-            self.approx_duration_label.show()
-            self.tutorial_name_label.show()
-            try:
-                self.author_name_label.set_label(module.tutorial.Author)
-                self.duration_label.set_label(module.tutorial.duration)
-                self.start_tut_BTN.show()
-                self.start_tut_BTN.set_label('Start Tutorial')
-            except Exception, e:
-                pass
+        if treeview.get_cursor()[0][0] == 0:
             try :
-                self.screenshot.show()
-                screenshot_path = self.images_path + self.selected_filename + '_scaled.png'  
-                self.screenshot.set_from_file(screenshot_path)
+                self.selected_filename = self.filenames[treeview.get_cursor()[0][1]]
+                module = __import__(self.selected_filename)         #should include a try here
+                self.description_label.set_label(module.tutorial.Description)
+                self.tutorial_name_label.set_label(module.tutorial.header)
+                self.by_label.show()
+                self.approx_duration_label.show()
+                self.tutorial_name_label.show()
+                try:
+                    self.author_name_label.set_label(module.tutorial.Author)
+                    self.duration_label.set_label(module.tutorial.duration)
+                    self.start_tut_BTN.show()
+                    self.start_tut_BTN.set_label('Start Tutorial')
+                except Exception, e:
+                    pass
+                try :
+                    self.screenshot.show()
+                    screenshot_path = self.images_path + self.selected_filename + '_scaled.png'  
+                    self.screenshot.set_from_file(screenshot_path)
+                except Exception, e:
+                    pass
             except Exception, e:
-                pass
-        except IndexError, e:
-            self.selected_menu_item_name = self.menu_item_names[(treeview.get_cursor()[0][0] - len(self.filenames))]
+                print 'Error while importing when cursor changed'
+        else:
+            self.selected_menu_item_name = self.menu_item_names[(treeview.get_cursor()[0][1])]
             module = __import__('observer')
             try :
                 self.description_label.set_label(module.observer.dictionary[self.selected_menu_item_name][1])
@@ -200,8 +205,6 @@ class DaskalosUI:
                 self.start_tut_BTN.set_label('Take Me There')
             except Exception :
                 pass
-        except Exception :
-            print 'Import Error'
         
     def searchbar_changed(self, data):
         """
@@ -209,10 +212,13 @@ class DaskalosUI:
             The function clears the list first and then calls a
             function to get list items.
         """
-        self.liststore1.clear()
+        self.treestore1.remove(self.detailed_tut)
+        self.treestore1.remove(self.tmt_tut)
+        self.detailed_tut = self.treestore1.append(None, ['Detailed Tutorials'])
+        self.tmt_tut = self.treestore1.append(None, ['Take-me-there Tutorials'])
         self.filenames = []
         self.menu_item_names = []
-        self.get_list_items(data.get_text().lower(), self.liststore1)
+        self.get_list_items(data.get_text().lower(), self.treestore1)
             
     def on_stop_BTN_pressed(self, data = None):
         """
