@@ -81,7 +81,7 @@ class DaskalosUI:
         
         self.screenshot = builder.get_object('screenshot')
         try :
-            screenshot_path = self.images_path + 'daskalos_opening.png'
+            screenshot_path = os.path.join(self.images_path , 'daskalos_opening.png')
             self.screenshot.set_from_file(screenshot_path)
         except Exception, e:
             print 'Could not get Daskalos_opening.png image'
@@ -178,7 +178,7 @@ class DaskalosUI:
             gets the respective screenshot also .
         """
         if treeview.get_cursor()[0][0] == 0:
-            try :
+            try:
                 self.selected_filename = self.filenames[treeview.get_cursor()[0][1]]
                 module = __import__(self.selected_filename)         #should include a try here
                 self.description_label.set_label(module.tutorial.Description)
@@ -186,6 +186,8 @@ class DaskalosUI:
                 self.by_label.show()
                 self.approx_duration_label.show()
                 self.tutorial_name_label.show()
+                self.author_name_label.show()
+                self.duration_label.show()
                 try:
                     self.author_name_label.set_label(module.tutorial.Author)
                     self.duration_label.set_label(module.tutorial.duration)
@@ -199,23 +201,44 @@ class DaskalosUI:
                     self.screenshot.set_from_file(screenshot_path)
                 except Exception, e:
                     pass
+            except IndexError :
+                self.screenshot.show()
+                self.start_tut_BTN.hide()
+                self.duration_label.hide()
+                self.author_name_label.hide()
+                self.screenshot.set_from_file(os.path.join(self.images_path , 'daskalos_opening.png'))
+                self.by_label.hide()
+                self.approx_duration_label.hide()
+                self.tutorial_name_label.hide()
+                self.description_label.set_label('')
             except Exception, e:
                 print 'Error while importing when cursor changed'
         else:
-            self.selected_menu_item_name = self.menu_item_names[(treeview.get_cursor()[0][1])]
-            module = __import__(self.selected_menu_item_name)
             try :
-                self.description_label.set_label(module.gmt_tut.description)
-                screenshot_path = self.images_path + 'daskalos_opening.png'  
-                self.screenshot.hide()
-                self.author_name_label.set_label('')
-                self.tutorial_name_label.set_label('')
-                self.duration_label.set_label('')
-                self.start_tut_BTN.show()
-                self.start_tut_BTN.set_label('Take Me There')
-            except Exception :
-                pass
-        
+                self.selected_menu_item_name = self.menu_item_names[(treeview.get_cursor()[0][1])]
+                module = __import__(self.selected_menu_item_name)
+                try :
+                    self.description_label.set_label(module.gmt_tut.description)
+                    screenshot_path = self.images_path + 'daskalos_opening.png'  
+                    self.screenshot.hide()
+                    self.author_name_label.set_label('')
+                    self.tutorial_name_label.set_label('')
+                    self.duration_label.set_label('')
+                    self.start_tut_BTN.show()
+                    self.start_tut_BTN.set_label('Take Me There')
+                except Exception :
+                    pass
+            except IndexError :
+                self.screenshot.show()
+                self.start_tut_BTN.hide()
+                self.duration_label.hide()
+                self.author_name_label.hide()
+                self.screenshot.set_from_file(os.path.join(self.images_path , 'daskalos_opening.png'))
+                self.by_label.hide()
+                self.approx_duration_label.hide()
+                self.tutorial_name_label.hide()
+                self.description_label.set_label('')
+                
     def searchbar_changed(self, data):
         """
             This function is called when searchbar is changed in window2.
