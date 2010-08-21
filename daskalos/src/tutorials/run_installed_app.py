@@ -57,7 +57,7 @@ class RunInstalledApp(Tutorial):
 		
 		observer = Observer()                              
 		
-		time.sleep(2)
+		time.sleep(1.5)
 		dogtail.procedural.keyCombo("<Alt>F2")
 
 		

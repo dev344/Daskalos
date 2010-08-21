@@ -127,19 +127,20 @@ class DaskalosUI:
                 except Exception, e:
                 	print 'Error while importing ', shortname
                 try:
-                    if((substring in module.tutorial.header.lower()) or (substring in module.tutorial.tags.lower())):
-                        treestore.append(self.how_to_tut, [module.tutorial.header])
-                        self.filenames.append(shortname)
+                    if(module.tutorial.header or module.tutorial.tags):
+                        if((substring in module.tutorial.header.lower()) or (substring in module.tutorial.tags.lower())):
+                            treestore.append(self.how_to_tut, [module.tutorial.header])
+                            self.filenames.append(shortname)
                 except Exception, e:
                     pass
-        try :
-            module = __import__('observer')
-            for key in module.observer.dictionary.keys():
-                if(substring in module.observer.dictionary[key][1].lower()):
-                    treestore.append(self.tmt_tut, [key])
-                    self.menu_item_names.append(key)
-        except Exception :
-            pass
+                try:
+                    if(module.gmt_tut.dictionary or module.gmt_tut.description):
+                        for key in module.gmt_tut.dictionary.keys():
+                            if(substring in module.gmt_tut.dictionary[key][1].lower()):
+                                 treestore.append(self.tmt_tut, [key])
+                                 self.menu_item_names.append(shortname)
+                except Exception, e:
+                    pass
         self.treeview.expand_all()
        
     def start_tut_BTN_button_press_event(self, data1, data2):
@@ -156,15 +157,17 @@ class DaskalosUI:
                 print 'Could not import daskalos_dialogbox.py '
         else :
             try :
-                module = __import__('observer')
-                menu_list = module.observer.dictionary[self.selected_menu_item_name][0]
-                time.sleep(1)
-                module.observer.openWindowFromMenu(menu_list)
+                module = __import__(self.selected_menu_item_name)
+                module2 = __import__('observer')
+                for key in module.gmt_tut.dictionary.keys():
+                    menu_list = module.gmt_tut.dictionary[key][0]
+                    time.sleep(1)
+                    module2.observer.openWindowFromMenu(menu_list)
             except Exception :
                 pass
                 
     def run_tutorial(self, data1, data2):                
-        #used it to debug things can be used to add some feature later if possible
+        #used it to debug things.... can be used to may be add some feature later if possible
         pass
         
     
@@ -200,9 +203,9 @@ class DaskalosUI:
                 print 'Error while importing when cursor changed'
         else:
             self.selected_menu_item_name = self.menu_item_names[(treeview.get_cursor()[0][1])]
-            module = __import__('observer')
+            module = __import__(self.selected_menu_item_name)
             try :
-                self.description_label.set_label(module.observer.dictionary[self.selected_menu_item_name][1])
+                self.description_label.set_label(module.gmt_tut.description)
                 screenshot_path = self.images_path + 'daskalos_opening.png'  
                 self.screenshot.hide()
                 self.author_name_label.set_label('')

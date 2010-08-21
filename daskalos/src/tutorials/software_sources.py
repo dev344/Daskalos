@@ -59,8 +59,10 @@ class SoftwareSources(Tutorial):
 		time.sleep(4)
 		
 	def run(self):
-		self.DialogBox_label = 'Now first choose your country and then\n choose a server from the list.Then click\n on "Choose Server" '
+		self.DialogBox_label = 'This is the software sources window.Please press next to continue." '
 		self.mainProgram()
+		yield
+		self.DialogBox_label = 'After the mouse stops moving first choose your country and then\n choose a server from the list.Then click\n on "Choose Server" '
 		file_path = os.path.join(os.path.expandvars("$DSK_HOME"), 'src/tutorials/sftwrsrcemouse.xnl')
 		args = 'cnee --replay --no-synchronise --file ' + file_path
 		p = subprocess.Popen(args,shell= True)

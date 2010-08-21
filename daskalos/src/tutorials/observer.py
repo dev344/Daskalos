@@ -53,31 +53,8 @@ class Observer():
 
 		click(args[0], roleName='menu')
 		click(args[1], roleName='menu')
+		time.sleep(0.5)
 		click(args[2], roleName='menu item')
-	
-	description = ["""Synaptic is a graphical package management tool which enables\n you to install, upgrade and remove software packages in a user\n friendly way.
-				   """,
-				   	'At software sources you can configure the sources for installable software\n and updates',
-				   	'At users and groups you can add and delete users and also set and \nchange passwords',
-				   	'Change system time date and timezone' ,
-				   	'Startup Manger',
-				   	'You can configure Login Screen',
-				   	'Network Tools is where you can view information about your network',
-				   	'Firefox delivers safe, easy web browsing. A familiar user interface,\nenhanced security features including protection from online identity\n theft,and integrated search let you get the most out of the web.',
-				   	'gedit is a text editor which supports most standard editor features,\n extending this basic functionality with other features not usually\n found in simple text editors. gedit is a graphical application which\n supports editing multiple text files in one window (known sometimes as\n tabs or MDI).',
-				   	'GNOME Terminal is a terminal emulation application where you can\n choose to play around with commands if you like.']
-				   
-	dictionary = {'Synaptic Package Manager' : [('System', 'Administration', 'Synaptic Package Manager'), description[0]] ,
-		 				'Software Sources' : [('System', 'Administration', 'Software Souces'), description[1]] ,
-		 				'Users and groups' : [('System', 'Administration', 'Users and Groups'), description[2]] ,
-		 				'Time and Date' : [('System', 'Administration', 'Time and Date'), description[3]] ,
-		 				'Startup Manager' : [('System', 'Administration', 'StartUp-Manager'), description[4]] ,
-		 				'Login Screen' : [('System', 'Administration', 'Login Screen'), description[5]] ,
-		 				'Network Tools' : [('System', 'Administration', 'Network Tools'), description[6]] ,
-		 				'Firefox Web Browser' : [('Applications', 'Internet' ,'Firefox Web Browser'), description[7]] ,
-		 				'Gedit Text Editor' : [('Applications', 'Accessories', 'gedit Text Editor'), description[8]],
-		 				'Gnome Terminal' : [('Applications', 'Accessories', 'Terminal'), description[9]] }
-		 				
-	
+
 		
 observer = Observer()	
