@@ -43,6 +43,7 @@ class DaskalosUI:
         self.window2 = builder.get_object("mainwindow2")
         self.window2.set_title("Daskalos")
         self.dialogbox = builder.get_object("dialogbox")
+        self.dialog_box_image = builder.get_object('dialog_box_image')
         self.filechooserdialog = builder.get_object('filechooserdialog')
         self.messagedialog = builder.get_object('messagedialog')
         self.aboutdialog = builder.get_object('aboutdialog')
@@ -51,6 +52,8 @@ class DaskalosUI:
             self.messagedialog.set_icon_from_file(os.path.join(self.images_path,'icon.jpg'))
             self.aboutdialog.set_icon_from_file(os.path.join(self.images_path,'icon.jpg'))
             self.filechooserdialog.set_icon_from_file(os.path.join(self.images_path,'icon.jpg'))
+            self.dialogbox.set_icon_from_file(os.path.join(self.images_path,'icon.jpg'))
+            self.dialog_box_image.set_from_file(os.path.join(self.images_path,'icon_scaled.jpg'))
         except Exception, e:
             pass
         
@@ -102,7 +105,7 @@ class DaskalosUI:
         treeview1.append_column(col0)
         
         treestore = gtk.TreeStore(str)
-        self.detailed_tut = treestore.append(None, ['Detailed Tutorials'])
+        self.how_to_tut = treestore.append(None, ['How-to Tutorials'])
         self.tmt_tut = treestore.append(None, ['Take-me-there Tutorials'])
         liststore = gtk.ListStore( gobject.TYPE_STRING)
         treeview1.set_model(treestore)
@@ -125,7 +128,7 @@ class DaskalosUI:
                 	print 'Error while importing ', shortname
                 try:
                     if((substring in module.tutorial.header.lower()) or (substring in module.tutorial.tags.lower())):
-                        treestore.append(self.detailed_tut, [module.tutorial.header])
+                        treestore.append(self.how_to_tut, [module.tutorial.header])
                         self.filenames.append(shortname)
                 except Exception, e:
                     pass
@@ -216,9 +219,9 @@ class DaskalosUI:
             The function clears the list first and then calls a
             function to get list items.
         """
-        self.treestore1.remove(self.detailed_tut)
+        self.treestore1.remove(self.how_to_tut)
         self.treestore1.remove(self.tmt_tut)
-        self.detailed_tut = self.treestore1.append(None, ['Detailed Tutorials'])
+        self.how_to_tut = self.treestore1.append(None, ['How-to Tutorials'])
         self.tmt_tut = self.treestore1.append(None, ['Take-me-there Tutorials'])
         self.filenames = []
         self.menu_item_names = []

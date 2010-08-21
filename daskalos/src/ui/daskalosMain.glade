@@ -391,8 +391,28 @@
         <property name="visible">True</property>
         <property name="spacing">2</property>
         <child>
-          <object class="GtkLabel" id="dialog_description_label">
+          <object class="GtkHBox" id="hbox5">
             <property name="visible">True</property>
+            <child>
+              <object class="GtkImage" id="dialog_box_image">
+                <property name="width_request">110</property>
+                <property name="height_request">125</property>
+                <property name="visible">True</property>
+                <property name="stock">gtk-missing-image</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="dialog_description_label">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="position">1</property>
