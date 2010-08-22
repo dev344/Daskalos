@@ -25,7 +25,7 @@ You may want to log out and log back in again so that i works properly.
 Important
 ---------
 Make sure no adminstrative window is open like synaptic package manager, 
-software sources, network settings while running daskalos.
+and software sources while running daskalos.
 
 
 How to write tutorials
@@ -37,21 +37,15 @@ it.With the help of these two applications and the module observer in daskalos
 folder you can start writing a tutorial in no time :)
 
 
+   Limitations for the tutorials:
+    For these tutorials if the list in the menu grows too long then some of the
+    menu items cannot be chosen.But since this is aimed to be used only by 
+    beginners in linux I assumed that they would not have many items in the 
+    menu.
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Author :  Devesh Yamparala<dev344@gmail.com>
+Date   :  22nd August 2010
