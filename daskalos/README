@@ -37,10 +37,12 @@ How to write tutorials
 -----------------------
 The structure of the tutorial can be understood by going through any of the 
 tutorial codes.To write a tutorial of your own you can use the help of an 
-application called 'Accerciser'.You can also use dogtail-recorder alongwith 
+application called 'Accerciser'.You can also use dogtail-recorder along with 
 it.With the help of these two applications and the module observer in daskalos
 folder you can start writing a tutorial in no time :)
 
+You can also make use of xnee if needed to make the tutorials.It might come
+of real use in some cases.
 
    Limitations for the tutorials:
     For these tutorials if the list in the menu grows too long then some of the

@@ -93,7 +93,8 @@ class DaskalosUI:
         self.approx_duration_label.hide()
         self.tutorial_name_label.hide()
 
-        raw_input("Press any key to quit")
+        gtk.main() 
+        
         
     def init_treeview(self, treeview1):
         """

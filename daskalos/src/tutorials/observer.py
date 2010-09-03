@@ -51,10 +51,10 @@ class Observer():
 		if(not self.isFocussed('gnome-panel')): 
 			raise Error("Could not focus gnome-panel")
 
-		click(args[0], roleName='menu')
-		click(args[1], roleName='menu')
+		for menu in args[:-1]:
+		        click(menu, roleName='menu')
 		time.sleep(0.5)
-		click(args[2], roleName='menu item')
+		click(args[-1], roleName='menu item')
 
 		
 observer = Observer()	

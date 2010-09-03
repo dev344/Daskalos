@@ -69,6 +69,7 @@ class CommandLineInstall(Tutorial):
 			raise Error("Could not focus frame " + frameName)
 		
 		type("sudo apt-get install ")
+		#type("vim")
 		#keyCombo("Return")                                                      #i am still debating whether to include this line or not
 		
 	def run(self):
