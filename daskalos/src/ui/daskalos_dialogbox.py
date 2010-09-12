@@ -32,6 +32,8 @@ class Dialogbox:
             except Exception :
                 pass
         except Exception,e:
+            # Here,this exception is raised mainly when the tutorial has been already run and 
+            # replay button has been pressed.
             reload(module)
             module.tutorial.part.next()
             try :

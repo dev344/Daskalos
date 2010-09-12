@@ -61,6 +61,15 @@
                       <object class="GtkMenu" id="menu3">
                         <property name="visible">True</property>
                         <child>
+                          <object class="GtkImageMenuItem" id="help_menu_item">
+                            <property name="label">gtk-help</property>
+                            <property name="visible">True</property>
+                            <property name="use_underline">True</property>
+                            <property name="use_stock">True</property>
+                            <signal name="button_press_event" handler="on_help_menu_item_button_press_event"/>
+                          </object>
+                        </child>
+                        <child>
                           <object class="GtkImageMenuItem" id="about_menu_item">
                             <property name="label">gtk-about</property>
                             <property name="visible">True</property>
@@ -638,5 +647,119 @@ Shaastra Distro(2010)</property>
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="icon_name">list-add</property>
+  </object>
+  <object class="GtkWindow" id="help_window">
+    <property name="border_width">6</property>
+    <property name="title" translatable="yes">Daskalos-Help</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="deletable">False</property>
+    <signal name="destroy" handler="on_help_window_destroy"/>
+    <signal name="delete_event" handler="on_help_window_destroy"/>
+    <child>
+      <object class="GtkVBox" id="vbox5">
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkLabel" id="label7">
+            <property name="height_request">30</property>
+            <property name="visible">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHBox" id="hbox8">
+            <property name="height_request">29</property>
+            <property name="visible">True</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label10">
+                <property name="width_request">40</property>
+                <property name="height_request">24</property>
+                <property name="visible">True</property>
+                <property name="xalign">0</property>
+                <property name="xpad">1</property>
+                <property name="label" translatable="yes">Frequently asked questions -</property>
+                <attributes>
+                  <attribute name="weight" value="heavy"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label11">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label8">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">Q)After I press 'Start tutorial' button nothing happens for about 2-3 seconds 
+and then a dialog box opens with no text.What to do?
+A)Restart Daskalos and try again.If it still doesn't work then restart your 
+computer and try.
+
+Q)Daskalos gets stuck and i can't select or click on anything.What to do?
+A)Check if any window like synaptic package manager or software 
+sources is kept open.Close all other windows and restart Daskalos.
+
+Q)I tried moving my mouse in between a tutorial and the tutorial did not
+run properly afterwards.What to do?
+A)DO NOT move or touch your mouse while a tutorial is running since
+you might disturb the sequence of events.</property>
+          </object>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHBox" id="hbox7">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkLabel" id="label12">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button1">
+                <property name="label">gtk-close</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+                <signal name="button_press_event" handler="on_help_window_destroy"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="padding">15</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </object>
+    </child>
   </object>
 </interface>

@@ -36,7 +36,9 @@ class DaskalosUI:
                                 'on_add_add_tut_BTN_pressed' : self.add_add_tut_BTN_pressed,
                                 'on_ok_BTN_pressed' : self.ok_BTN_pressed,
                                 'on_about_menu_item_press' : self.about_menu_item_press,
-                                'on_add_tut_menu_item_press' : self.add_tut_menu_item_press }
+                                'on_add_tut_menu_item_press' : self.add_tut_menu_item_press,
+                                'on_help_menu_item_button_press_event' : self.help_menu_item_press,
+                                'on_help_window_destroy' : self.help_window_destroy }
                                 
         builder.connect_signals( signal_connections )
         
@@ -47,6 +49,7 @@ class DaskalosUI:
         self.filechooserdialog = builder.get_object('filechooserdialog')
         self.messagedialog = builder.get_object('messagedialog')
         self.aboutdialog = builder.get_object('aboutdialog')
+        self.helpwindow = builder.get_object('help_window')
         try:
             self.window2.set_icon_from_file(os.path.join(self.images_path,'icon.jpg'))
             self.messagedialog.set_icon_from_file(os.path.join(self.images_path,'icon.jpg'))
@@ -73,6 +76,8 @@ class DaskalosUI:
         self.author_name_label = builder.get_object('author_name_label')
         self.duration_label = builder.get_object('duration_label')
         self.dialog_description_label = builder.get_object('dialog_description_label')
+        self.label8 = builder.get_object('label8')
+        self.label10 = builder.get_object('label10')
         
         self.stop_BTN = builder.get_object('stop_BTN')
         self.start_tut_BTN = builder.get_object('start_tut_BTN')
@@ -256,13 +261,18 @@ class DaskalosUI:
             
     def on_stop_BTN_pressed(self, data = None):
         """
-            Called when the stop button is pressed in dialog box.
+            Called when the stop button or return button is pressed in dialog box.
         """
         self.dialogbox.hide()
         self.window2.show_all()
         self.stop_BTN.set_label('Stop')
         self.next_BTN.show()
         self.dialog_description_label.set_label('')
+        try:
+            module = __import__(self.selected_filename)
+            module.tutorial.part = None
+        except Exception:
+            pass
     
     def next_BTN_clicked(self, data = None):
         """
@@ -316,7 +326,29 @@ class DaskalosUI:
         self.aboutdialog.run()
         self.aboutdialog.hide()       
 
+    def help_menu_item_press(self, data1 =None, data2 = None):
+        self.helpwindow.show()
+        faq = """Q)After I press 'Start tutorial' button nothing happens for about 2-3 seconds 
+and then a dialog box opens with no text.What to do?
+A)Restart Daskalos and try again.If it still doesn't work then restart your 
+computer and try.
+
+Q)Daskalos gets stuck and i can't select or click on anything.What to do?
+A)Check if any window like synaptic package manager or software 
+sources is kept open.Close all other windows and restart Daskalos.
+
+Q)I tried moving my mouse in between a tutorial and the tutorial did not
+run properly afterwards.What to do?
+A)DO NOT move or touch your mouse while a tutorial is running since
+you might disturb the sequence of events.
+                
+                """
+        faq_header = "Frequently asked questions -"
+        self.label8.set_label(faq)
+        self.label10.set_label(faq_header)
         
+    def help_window_destroy(self,data1 = None,data2 = None):
+        self.helpwindow.hide()
     
 daskalosUI = DaskalosUI()
     	
