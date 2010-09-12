@@ -50,7 +50,7 @@ class Observer():
 		"""
 		if(not self.isFocussed('gnome-panel')): 
 			raise Error("Could not focus gnome-panel")
-
+                focus.frame('Top Expanded Edge Panel')
 		for menu in args[:-1]:
 		        click(menu, roleName='menu')
 		time.sleep(0.5)
